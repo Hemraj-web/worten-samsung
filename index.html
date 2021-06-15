@@ -1,17 +1,95 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Samsung</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Samsung</title>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+          integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
+<style>
+    .samsung__display__list_acc {
+        display: none;
+    }
+
+    ul.vertical_accordion {
+        display: flex;
+        min-height: 500px;
+        max-height: 500px;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        list-style-type: none;
+
+    }
+
+    .vertical_accordion li {
+        flex: 1;
+        display: flex;
+        align-items: stretch;
+        padding: 20px;
+        background: #000000;
+        cursor: pointer;
+        transition: all 0.5s ease;
+    }
+
+    .vertical_accordion li:hover {
+        background: #000000;
+    }
+
+    .vertical_accordion li.active {
+        flex: 5;
+        background: #fff;
+        cursor: default;
+    }
+
+    .vertical_accordion li.active h2 {
+        color: #000000;
+    }
+
+    .vertical_accordion li.active .section-content {
+        flex: 4;
+        opacity: 1;
+        transform: scaleX(1);
+        color: #000000;
+    }
+
+    .vertical_accordion li .section-title {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        color: white;
+    }
+
+    .vertical_accordion li .section-title h2 {
+        margin: 0;
+        transform: rotate(-90deg);
+        white-space: nowrap;
+    }
+
+    .vertical_accordion li .section-content {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+        transition: all 0.25s 0.1s ease-out;
+    }
+</style>
+
+
 <!-- -------------- TOp slider section Open  ----------------  -->
 <section class="samsung__top__banner" id="samsung__top__banner">
   <div class="samsung__container">
@@ -21,20 +99,18 @@
     </div>
   </div>
 </section>
-
 <!-- -------------- TOp slider section Close  ----------------  -->
-
 <!-- -------------- main body  section open  ----------------  -->
 <section class="samsung__body__part">
   <div class="samsung__container">
     <div class="samsung__top__cat">
       <ul class="samsung__lists">
-          <li>
-            <div class="samsung__list__item">
-              <img src="images/neoqled-card.jpg" alt="">
-              <p>NEO QLED</p>
-            </div>
-          </li>
+        <li>
+          <div class="samsung__list__item">
+            <img src="images/neoqled-card.jpg" alt="">
+            <p>NEO QLED</p>
+          </div>
+        </li>
         <li>
           <div class="samsung__list__item">
             <img src="images/neoqled-card.jpg" alt="">
@@ -47,7 +123,7 @@
             <p>UHD</p>
           </div>
         </li>
-        <li   class="active">
+        <li class="active">
           <div class="samsung__list__item">
             <img src="images/neoqled-card.jpg" alt="">
             <p>TV'S LIFESTYLE</p>
@@ -61,10 +137,10 @@
 
 <!-- --------------  List Items display section Open  ----------------  -->
 <!-- this section for neo qled-->
-<section class="samsung__list__newled">
+<section class="samsung__list__newled br-section active">
   <div class="samsung__container">
-    <ul class="samsung__display__list">
-      <li>
+    <ul id="samsung__display__list" class="samsung__display__list">
+      <li data-sec="samsung_imagem">
         <div class="sumsung__display_heading">
           <p>IMAGEM</p>
           <i class="fas fa-plus"></i>
@@ -74,9 +150,9 @@
           <p>A Nova Geração. <br/> Evolução sem limites</p>
         </div>
       </li>
-      <li>
+      <li data-sec="samsung_design">
         <div class="sumsung__display_heading">
-          <p>IMAGEM</p>
+          <p>DESIGN</p>
           <i class="fas fa-plus"></i>
         </div>
         <div class="samsung__info">
@@ -84,9 +160,9 @@
           <p>A Nova Geração. <br/> Evolução sem limites</p>
         </div>
       </li>
-      <li>
+      <li data-sec="samsung_som">
         <div class="sumsung__display_heading">
-          <p>IMAGEM</p>
+          <p>SOM</p>
           <i class="fas fa-plus"></i>
         </div>
         <div class="samsung__info">
@@ -95,10 +171,48 @@
         </div>
       </li>
     </ul>
+    <div class="samsung__display__list_acc">
+      <ul class="vertical_accordion">
+        <li id="samsung_imagem">
+          <div class="section-title">
+            <h2>IMAGEM</h2>
+          </div>
+          <div class="section-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatum temporibus dicta
+              reprehenderit
+              tempore quisquam consequuntur porro omnis laboriosam praesentium at et sapiente, provident sit! Suscipit
+              recusandae, ab ratione dignissimos.</p>
+          </div>
+        </li>
+        <li id="samsung_design">
+          <div class="section-title">
+            <h2>DESIGN</h2>
+          </div>
+          <div class="section-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora totam delectus, eius nostrum aspernatur
+              voluptas enim fugit ipsa magni voluptatem, odio sit accusamus vel id, commodi consequuntur possimus
+              repellat
+              necessitatibus!</p>
+          </div>
+        </li>
+        <li id="samsung_som">
+          <div class="section-title">
+            <h2>SOM</h2>
+          </div>
+          <div class="section-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur saepe vel facilis quae nihil ad
+              aspernatur
+              ex delectus. Tenetur nulla voluptates similique quos, quia possimus, magnam esse natus quis ipsa.</p>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
   </div>
 </section>
 <!-- this section for qled -->
-<section class="samsung__list__qled">
+<section class="samsung__list__qled br-section">
   <div class="samsung__container">
     <ul class="samsung__display__list">
       <li>
@@ -132,11 +246,48 @@
         </div>
       </li>
     </ul>
+    <div class="something">
+      <ul class="vertical_accordion">
+        <li>
+          <div class="section-title">
+            <h2>IMAGEM</h2>
+          </div>
+          <div class="section-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatum temporibus dicta
+              reprehenderit
+              tempore quisquam consequuntur porro omnis laboriosam praesentium at et sapiente, provident sit! Suscipit
+              recusandae, ab ratione dignissimos.</p>
+          </div>
+        </li>
+        <li class="active">
+          <div class="section-title">
+            <h2>DESIGN</h2>
+          </div>
+          <div class="section-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora totam delectus, eius nostrum aspernatur
+              voluptas enim fugit ipsa magni voluptatem, odio sit accusamus vel id, commodi consequuntur possimus
+              repellat
+              necessitatibus!</p>
+          </div>
+        </li>
+        <li>
+          <div class="section-title">
+            <h2>GAMING</h2>
+          </div>
+          <div class="section-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur saepe vel facilis quae nihil ad
+              aspernatur
+              ex delectus. Tenetur nulla voluptates similique quos, quia possimus, magnam esse natus quis ipsa.</p>
+          </div>
+        </li>
+
+      </ul>
+    </div>
   </div>
 </section>
 
 <!-- this section for UHD -->
-<section class="samsung__list__uhd ">
+<section class="samsung__list__uhd br-section">
   <div class="samsung__container">
     <ul class="samsung__display__list">
       <li>
@@ -170,11 +321,48 @@
         </div>
       </li>
     </ul>
+    <div class="something">
+      <ul class="vertical_accordion">
+        <li>
+          <div class="section-title">
+            <h2>IMAGEM</h2>
+          </div>
+          <div class="section-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatum temporibus dicta
+              reprehenderit
+              tempore quisquam consequuntur porro omnis laboriosam praesentium at et sapiente, provident sit! Suscipit
+              recusandae, ab ratione dignissimos.</p>
+          </div>
+        </li>
+        <li class="active">
+          <div class="section-title">
+            <h2>DESIGN</h2>
+          </div>
+          <div class="section-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora totam delectus, eius nostrum aspernatur
+              voluptas enim fugit ipsa magni voluptatem, odio sit accusamus vel id, commodi consequuntur possimus
+              repellat
+              necessitatibus!</p>
+          </div>
+        </li>
+        <li>
+          <div class="section-title">
+            <h2>GAMING</h2>
+          </div>
+          <div class="section-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur saepe vel facilis quae nihil ad
+              aspernatur
+              ex delectus. Tenetur nulla voluptates similique quos, quia possimus, magnam esse natus quis ipsa.</p>
+          </div>
+        </li>
+
+      </ul>
+    </div>
   </div>
 </section>
 
 <!-- this section for TV's Lifestyle -->
-<section class="samsung__list__tvlifestyle active">
+<section class="samsung__list__tvlifestyle br-section">
   <div class="samsung__container">
     <ul class="samsung__display__list">
       <li>
@@ -208,6 +396,43 @@
         </div>
       </li>
     </ul>
+    <div class="something">
+      <ul class="vertical_accordion">
+        <li>
+          <div class="section-title">
+            <h2>IMAGEM</h2>
+          </div>
+          <div class="section-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatum temporibus dicta
+              reprehenderit
+              tempore quisquam consequuntur porro omnis laboriosam praesentium at et sapiente, provident sit! Suscipit
+              recusandae, ab ratione dignissimos.</p>
+          </div>
+        </li>
+        <li class="active">
+          <div class="section-title">
+            <h2>DESIGN</h2>
+          </div>
+          <div class="section-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora totam delectus, eius nostrum aspernatur
+              voluptas enim fugit ipsa magni voluptatem, odio sit accusamus vel id, commodi consequuntur possimus
+              repellat
+              necessitatibus!</p>
+          </div>
+        </li>
+        <li>
+          <div class="section-title">
+            <h2>GAMING</h2>
+          </div>
+          <div class="section-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur saepe vel facilis quae nihil ad
+              aspernatur
+              ex delectus. Tenetur nulla voluptates similique quos, quia possimus, magnam esse natus quis ipsa.</p>
+          </div>
+        </li>
+
+      </ul>
+    </div>
   </div>
 </section>
 <!-- -------------- List Items display section Close  ----------------  -->
@@ -281,5 +506,6 @@
 <!-- -----------------   Footer category sectio Close  ------------------------------  -->
 
 <script src="main.js"></script>
+
 </body>
 </html>
