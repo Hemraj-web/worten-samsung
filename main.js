@@ -33,8 +33,8 @@ $(document).ready(function(){
       $(this).addClass('active');
       var sec_id = $(this).data('sec');
       $("#"+sec_id).addClass('active');
-          $('.samsung__display__list_acc').show();
-          $("#samsung__display__list").hide();
+      $(this).parent().parent().find('.samsung__display__list_acc').show();
+      $(this).parent().parent().find(".samsung__display__list").hide();
    }
 
    samsung_display_list.on('click', toggleSamsungDisplay);
