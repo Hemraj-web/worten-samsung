@@ -342,6 +342,28 @@ color:#fff !important;
     .vertical_accordion li .section-title{
         transform:rotate(0) !important;
     }
+
+/*    this css for main top toggle image */
+    .samsung__list__qled .samsung__display__list,
+    .samsung__list__uhd .samsung__display__list,
+    .samsung__list__tvlifestyle .samsung__display__list,
+    .samsung__list__newled .samsung__display__list{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .samsung__display__list li {
+        border-bottom: 2px solid #fff;
+        border-right:none;
+    }
+    .samsung__display__list li:last-child {
+        border-bottom: none;
+    }
+
+    .vertical_accordion li.active .section-content {
+        width: 100%;
+    }
+
 }
 
 
