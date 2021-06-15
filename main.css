@@ -338,6 +338,9 @@ color:#fff !important;
     .vertical_accordion li{
         flex-direction:column;
     }
+    .vertical_accordion li .section-title{
+        transform:rotate(0) !important;
+    }
 }
 
 
