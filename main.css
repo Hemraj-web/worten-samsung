@@ -24,6 +24,7 @@
     width: 100%;
     max-width:1300px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 /*  ============ global css for  all section Close*/
@@ -298,6 +299,18 @@ color:#fff !important;
 }
 .samsung__cat__item .samsung__btn:hover{
     background: #a61410;
+}
+
+@media screen and (max-width: 575.98px) {
+    .vertical_accordion{
+        flex-direction:column;
+    }
+    .vertical_accordion li .section-title h2{
+        transform:rotate(0) !important;
+    }
+    .vertical_accordion li{
+        flex-direction:column;
+    }
 }
 
 
