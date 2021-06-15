@@ -68,12 +68,9 @@
 
 .samsung__top__cat > ul > li.active{
     border-bottom:30px solid #000;
-
-
 }
 
-.samsung__top__cat > ul > li p.active{
-
+.samsung__top__cat > ul > li.active p{
     border-bottom-left-radius: unset;
     border-bottom-right-radius: unset;
 
@@ -105,15 +102,115 @@
 
 /*  ============ main body  section Close */
 /*  ============  List Items display section Open  */
-.samsung__list__display {
-    /*padding-top: 20px;*/
+
+/* neo qled */
+.samsung__list__newled {
+  display: none;
 }
-.samsung__dislplay__list img{
+.samsung__list__newled.active {
+    display: block;
+}
+.samsung__list__newled .samsung__display__list{
+    background-image: url("images/qled-8l-display.jpg");
+    min-height: 555px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+/* qled qled */
+.samsung__list__qled {
+    display: none;
+}
+.samsung__list__qled.active {
+    display: block;
+}
+
+.samsung__list__qled .samsung__display__list{
+    background-image: url("images/qled-display.jpg");
+    min-height: 555px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* uhd */
+.samsung__list__uhd {
+  display: none;
+}
+.samsung__list__uhd {
+    display: block;
+}
+
+.samsung__list__uhd .samsung__display__list {
+    background-image: url("images/uhd-display.jpg");
+    min-height: 555px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    visibility: visible;
+    opacity: 1;
+
+}
+
+/* Tv's lifestyle */
+.samsung__list__tvlifestyle{
+    display: none;
+}
+
+.samsung__list__tvlifestyle.active{
+    display: none;
+}
+
+.samsung__list__tvlifestyle   .samsung__display__list {
+    background-image: url("images/tv-lifestyle-display.jpg");
+    min-height: 555px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    visibility: visible;
+    opacity: 1;
+}
+
+.samsung__display__list img{
    background-size: cover;
     background-position: center;
     max-width: 100%;
     width: 100%;
 }
+
+.samsung__display__list li{
+    color: #fff;
+    list-style: none;
+    width: 100%;
+    border-right:2px solid #fff;
+}
+.sumsung__display_heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 26px;
+    cursor: pointer;
+}
+
+.samsung__display__list .samsung__info {
+    padding: 26px;
+
+}
+.samsung__display__list .samsung__info p{
+    padding-top:15px;
+}
+
+.samsung__info {
+    display: none;
+}
+
 
 
 /*  ============  List Items display section Close  */
