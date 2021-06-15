@@ -16,9 +16,20 @@ $(document).ready(function(){
    section.on('click', toggleAccordion);
 
 
-   var brsec = $('.samsung__display__list li');
+   var brsec = $('.samsung__lists li');
    function toggleAcc(){
       brsec.removeClass('active');
+      $(this).addClass('active');
+      var topsec_id = $(this).data('topsec');
+      var br_all_section = $('section.br-section');
+      br_all_section.removeClass('active');
+      $("."+topsec_id).addClass('active');
+   }
+
+   brsec.on('click', toggleAcc);
+   var samsung_display_list = $('.samsung__display__list li');
+   function toggleSamsungDisplay(){
+      samsung_display_list.removeClass('active');
       $(this).addClass('active');
       var sec_id = $(this).data('sec');
       $("#"+sec_id).addClass('active');
@@ -26,7 +37,10 @@ $(document).ready(function(){
           $("#samsung__display__list").hide();
    }
 
-   brsec.on('click', toggleAcc);
+   samsung_display_list.on('click', toggleSamsungDisplay);
+
+
+
 });
 
 
