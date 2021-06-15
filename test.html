@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Samsung</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<!-- -------------- TOp slider section Open  ----------------  -->
+<section class="samsung__top__banner" id="samsung__top__banner">
+  <div class="samsung__container">
+    <div class="samsung__image__wrap">
+      <div class="samsung__logo"><img src="images/samsung-logo.png" alt=""></div>
+      <div class="samsung__text"><h1>Conhece a nova gama de <br/> TV’s Samsung 2021</h1></div>
+    </div>
+  </div>
+</section>
+
+<!-- -------------- TOp slider section Close  ----------------  -->
+
+<!-- -------------- main body  section open  ----------------  -->
+
+<style>
+
+    ul.vertical_accordion {
+        display: flex;
+        min-height: 500px;
+        max-height: 500px;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        list-style-type: none;
+    }
+
+    .vertical_accordion li {
+        flex: 1;
+        display: flex;
+        align-items: stretch;
+        padding: 20px;
+        background: #E74C3C;
+        cursor: pointer;
+        transition: all 0.5s ease;
+    }
+    .vertical_accordion li:hover {
+        background: #e53f2e;
+    }
+    .vertical_accordion li.active {
+        flex: 5;
+        background: #fff;
+        cursor: default;
+    }
+    .vertical_accordion li.active h2 {
+        color: #E74C3C;
+    }
+    .vertical_accordion li.active .section-content {
+        flex: 4;
+        opacity: 1;
+        transform: scaleX(1);
+        color: #E74C3C;
+    }
+    .vertical_accordion li .section-title {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        color: white;
+    }
+    .vertical_accordion li .section-title h2 {
+        margin: 0;
+        transform: rotate(-90deg);
+        white-space: nowrap;
+    }
+    .vertical_accordion li .section-content {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+        transition: all 0.25s 0.1s ease-out;
+    }
+</style>
+<ul class="vertical_accordion">
+  <li>
+    <div class="section-title">
+      <h2>Section 1</h2>
+    </div>
+    <div class="section-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatum temporibus dicta reprehenderit
+        tempore quisquam consequuntur porro omnis laboriosam praesentium at et sapiente, provident sit! Suscipit
+        recusandae, ab ratione dignissimos.</p>
+    </div>
+  </li>
+  <li class="active">
+    <div class="section-title">
+      <h2>Section 2</h2>
+    </div>
+    <div class="section-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora totam delectus, eius nostrum aspernatur
+        voluptas enim fugit ipsa magni voluptatem, odio sit accusamus vel id, commodi consequuntur possimus repellat
+        necessitatibus!</p>
+    </div>
+  </li>
+  <li>
+    <div class="section-title">
+      <h2>Section 3</h2>
+    </div>
+    <div class="section-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur saepe vel facilis quae nihil ad aspernatur
+        ex delectus. Tenetur nulla voluptates similique quos, quia possimus, magnam esse natus quis ipsa.</p>
+    </div>
+  </li>
+
+</ul>
+
+<section class="samsung__body__part">
+  <div class="samsung__container">
+    <div class="samsung__top__cat">
+      <ul class="samsung__lists">
+        <li>
+          <div class="samsung__list__item active">
+            <img src="images/neoqled-card.jpg" alt="">
+            <p>NEO QLED</p>
+          </div>
+        </li>
+        <li  class="active">
+          <div class="samsung__list__item">
+            <img src="images/neoqled-card.jpg" alt="">
+            <p>NEO QLED</p>
+          </div>
+        </li>
+        <li>
+          <div class="samsung__list__item">
+            <img src="images/neoqled-card.jpg" alt="">
+            <p>NEO QLED</p>
+          </div>
+        </li>
+        <li>
+          <div class="samsung__list__item">
+            <img src="images/neoqled-card.jpg" alt="">
+            <p>NEO QLED</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- -------------- main body section Close  ----------------  -->
+
+<!-- --------------  List Items display section Open  ----------------  -->
+<section class="samsung__list__display">
+  <div class="samsung__container">
+    <ul class="samsung__dislplay__list">
+      <li>
+        <img src="images/qled-8l-display.jpg" alt="">
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- -------------- List Items display section Close  ----------------  -->
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+  var section = $('.vertical_accordion li');
+
+  function toggleAccordion() {
+    section.removeClass('active');
+    $(this).addClass('active');
+  }
+
+  section.on('click', toggleAccordion);
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+.som1{
+    display:none;
+}
+.som1.active{
+    display:block;
+}
+.accordion-some .acc-wrapper{
+    display:none;
+}
+.accordion-some.active .acc-wrapper{
+    display:block;
+}
+
+
+
+/*  ============ global css for  all section Open*/
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.samsung__container{
+    width: 100%;
+    max-width:1300px;
+    margin: 0 auto;
+}
+
+/*  ============ global css for  all section Close*/
+
+/*  ============ Top banner slider  section Open*/
+
+.samsung__image__wrap{
+   background-image: url("images/samsung-banner-top.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   height:400px;
+    width: 100%;
+}
+
+.samsung__image__wrap .samsung__logo img{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    padding-left: 10%;
+    padding-top: 10%;
+}
+.samsung__image__wrap .samsung__text{
+    color:#fff;
+    padding-left:10%;
+    padding-top: 5%;
+}
+
+/*  ============ Top banner slider  section Close*/
+
+/*  ============  main body  section open  */
+
+.samsung__body__part {
+    margin-top: 30px;
+}
+.samsung__top__cat ul {
+    display: flex;
+    column-gap: 15px;
+    position: relative;
+    align-items: baseline
+}
+
+.samsung__top__cat > ul > li.active{
+    border-bottom:30px solid #000;
+
+
+}
+
+.samsung__top__cat > ul > li p.active{
+
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
+
+}
+.samsung__top__cat > ul > li {
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.samsung__lists .samsung__list__item img{
+    max-width: 100%;
+  border-top-left-radius: 10px;
+    -webkit-border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+}
+.samsung__lists .samsung__list__item p{
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/*  ============ main body  section Close */
+/*  ============  List Items display section Open  */
+.samsung__list__display {
+    /*padding-top: 20px;*/
+}
+.samsung__dislplay__list img{
+   background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    width: 100%;
+}
+
+
+/*  ============  List Items display section Close  */
