@@ -12,9 +12,15 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
 </head>
 <body>
 <style>
+    .swiper-slide:last-child {
+        margin-right: calc(100% - (100% / 3));
+    }
+
     .samsung__display__list_acc {
         display: none;
     }
@@ -89,6 +95,9 @@
         opacity: 0;
         transition: all 0.25s 0.1s ease-out;
     }
+    .vertical_accordion li.active .section-title .fa-plus::before{
+        content:"\f068";
+    }
 </style>
 
 
@@ -107,27 +116,27 @@
 <!-- -------------- main body  section open  ----------------  -->
 <section class="samsung__body__part">
   <div class="samsung__container">
-    <div class="samsung__top__cat">
-      <ul class="samsung__lists">
-        <li class="active" data-topsec="samsung__list__newled">
+    <div class="samsung__top__cat mySwiper">
+      <ul class="samsung__lists swiper-wrapper">
+        <li class="active swiper-slide" data-topsec="samsung__list__newled">
           <div class="samsung__list__item">
             <img src="images/neoqled-card.jpg" alt="">
             <p>NEO QLED</p>
           </div>
         </li>
-        <li data-topsec="samsung__list__qled">
+        <li class="swiper-slide" data-topsec="samsung__list__qled">
           <div class="samsung__list__item">
             <img src="images/neoqled-card.jpg" alt="">
             <p>QLED</p>
           </div>
         </li>
-        <li data-topsec="samsung__list__uhd">
+        <li class="swiper-slide" data-topsec="samsung__list__uhd">
           <div class="samsung__list__item">
             <img src="images/neoqled-card.jpg" alt="">
             <p>UHD</p>
           </div>
         </li>
-        <li data-topsec="samsung__list__tvlifestyle">
+        <li class="swiper-slide" data-topsec="samsung__list__tvlifestyle">
           <div class="samsung__list__item">
             <img src="images/neoqled-card.jpg" alt="">
             <p>TV'S LIFESTYLE</p>
@@ -603,7 +612,35 @@
 </section>
 <!-- -------------- List Items display section Close  ----------------  -->
 
-
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    breakpoints: {
+      290: {
+        slidesPerView: '2',
+        centeredSlides: true,
+        freeMode: true,
+        spaceBetween: 10,
+      },
+      640: {
+        slidesPerView: '2',
+        centeredSlides: true,
+        freeMode: true,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 4.5,
+        spaceBetween: 5,
+      },
+      1024: {
+        slidesPerView: 4.15,
+        spaceBetween: 5,
+      },
+    },
+  });
+</script>
 <script src="main.js"></script>
 
 </body>

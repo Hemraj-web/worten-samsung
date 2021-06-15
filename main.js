@@ -48,9 +48,13 @@ $(document).ready(function(){
       var br_all_section = $('section.br-section');
       br_all_section.removeClass('active');
       $("."+topsec_id).addClass('active');
+
+      $("."+topsec_id).find('.samsung__display__list_acc').hide();
+      $("."+topsec_id).find(".samsung__display__list").show();
    }
 
    brsec.on('click', toggleAcc);
+   var brdisplay = false;
    var samsung_display_list = $('.samsung__display__list li');
    function toggleSamsungDisplay(){
       samsung_display_list.removeClass('active');
