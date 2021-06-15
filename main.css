@@ -122,13 +122,40 @@
 
 
 /* neo gled inside design css open  */
-
+.vertical_accordion li.active .section-title {
+    transform: unset;
+}
+.vertical_accordion li.active{
+  display: block;
+}
 .vertical_accordion .section-title {
     display: flex;
     justify-content: center;
 }
 .vertical_accordion li.active h2{
 color:#fff !important;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.vertical_accordion li.active .section-content{
+    margin-top: 55px !important;
+    background: rgba(0,0,0,0.5);
+    color: #fff !important;
+    width: 85%;
+    border-radius:15px;
+    padding: 20px;
+}
+
+.vertical_accordion li.active .section-content p{
+  padding-bottom: 10px;
+}
+
+.vertical_accordion li.active .section-content p{
+    padding-left: 5%;
+}
+.vertical_accordion li.active .section-content ul{
+  padding-left: 8%;
 }
 /* neo gled inside design css close  */
 
