@@ -124,7 +124,7 @@
             <p>NEO QLED</p>
           </div>
         </li>
-        <li class="swiper-slide" data-topsec="samsung__list__qled">
+        <li class="swiper-slide s_qled" data-topsec="samsung__list__qled">
           <div class="samsung__list__item">
             <img src="images/neoqled-card.jpg" alt="">
             <p>QLED</p>
@@ -402,9 +402,9 @@
   </section>
   <!-- -----------------   Footer category sectio Open ------------------------------  -->
   <section class="samsung__disply__cat">
-    <div class="samsung__container">
-      <div class="Samsung__cat__items">
-        <div class="samsung__cat__item">
+    <div class="samsung__container swipper_qled">
+      <div class="Samsung__cat__items swiper-wrapper">
+        <div class="samsung__cat__item swiper-slide">
           <div class="samsung__cat__image">
             <img src="images/lap.png" alt="">
             <div class="samsung__overlay__logo">
@@ -423,7 +423,7 @@
             <a href="#" class="samsung__btn">ver artigos</a>
           </div>
         </div>
-        <div class="samsung__cat__item">
+        <div class="samsung__cat__item swiper-slide">
           <div class="samsung__cat__image">
             <img src="images/lap.png" alt="">
             <div class="samsung__overlay__logo">
@@ -442,7 +442,7 @@
             <a href="#" class="samsung__btn">ver artigos</a>
           </div>
         </div>
-        <div class="samsung__cat__item">
+        <div class="samsung__cat__item swiper-slide">
           <div class="samsung__cat__image">
             <img src="images/lap.png" alt="">
             <div class="samsung__overlay__logo">
@@ -551,9 +551,9 @@
 
   <!-- -----------------   Footer category sectio Open ------------------------------  -->
   <section class="samsung__disply__cat">
-    <div class="samsung__container">
-      <div class="Samsung__cat__items">
-        <div class="samsung__cat__item">
+    <div class="samsung__container swipper_uhd">
+      <div class="Samsung__cat__items swiper-wrapper">
+        <div class="samsung__cat__item swiper-slide">
           <div class="samsung__cat__image">
             <img src="images/lap.png" alt="">
             <div class="samsung__overlay__logo">
@@ -572,7 +572,7 @@
             <a href="#" class="samsung__btn">ver artigos</a>
           </div>
         </div>
-        <div class="samsung__cat__item">
+        <div class="samsung__cat__item swiper-slide">
           <div class="samsung__cat__image">
             <img src="images/lap.png" alt="">
             <div class="samsung__overlay__logo">
@@ -591,7 +591,7 @@
             <a href="#" class="samsung__btn">ver artigos</a>
           </div>
         </div>
-        <div class="samsung__cat__item">
+        <div class="samsung__cat__item swiper-slide">
           <div class="samsung__cat__image">
             <img src="images/lap.png" alt="">
             <div class="samsung__overlay__logo">
@@ -685,9 +685,9 @@
   </div>
   <!-- -----------------   Footer category sectio Open ------------------------------  -->
   <section class="samsung__disply__cat">
-    <div class="samsung__container">
-      <div class="Samsung__cat__items">
-        <div class="samsung__cat__item">
+    <div class="samsung__container swipper_life">
+      <div class="Samsung__cat__items swiper-wrapper">
+        <div class="samsung__cat__item swiper-slide">
           <div class="samsung__cat__image">
             <img src="images/lap.png" alt="">
             <div class="samsung__overlay__logo">
@@ -706,7 +706,7 @@
             <a href="#" class="samsung__btn">ver artigos</a>
           </div>
         </div>
-        <div class="samsung__cat__item">
+        <div class="samsung__cat__item swiper-slide">
           <div class="samsung__cat__image">
             <img src="images/lap.png" alt="">
             <div class="samsung__overlay__logo">
@@ -725,7 +725,7 @@
             <a href="#" class="samsung__btn">ver artigos</a>
           </div>
         </div>
-        <div class="samsung__cat__item">
+        <div class="samsung__cat__item swiper-slide">
           <div class="samsung__cat__image">
             <img src="images/lap.png" alt="">
             <div class="samsung__overlay__logo">
@@ -797,15 +797,104 @@
         spaceBetween: 20,
       },
       768: {
-        slidesPerView: 4.5,
+        slidesPerView: 4,
         spaceBetween: 5,
       },
       1024: {
-        slidesPerView: 4.15,
+        slidesPerView: 4,
         spaceBetween: 5,
       },
     },
   });
+
+  var swipper_qled = new Swiper(".swipper_qled", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    observer: true,
+    observeParents: true,
+    autoplay: {
+      delay: 4500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      290: {
+        slidesPerView: '2',
+        spaceBetween: 10,
+      },
+      640: {
+        slidesPerView: '2',
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 5,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 5,
+      },
+    },
+  });
+
+  var swipper_uhd = new Swiper(".swipper_uhd", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    observer: true,
+    observeParents: true,
+    autoplay: {
+      delay: 4500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      290: {
+        slidesPerView: '2',
+        spaceBetween: 10,
+      },
+      640: {
+        slidesPerView: '2',
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 5,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 5,
+      },
+    },
+  });
+
+  var swipper_life = new Swiper(".swipper_life", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    observer: true,
+    observeParents: true,
+    autoplay: {
+      delay: 4500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      290: {
+        slidesPerView: '2',
+        spaceBetween: 10,
+      },
+      640: {
+        slidesPerView: '2',
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 5,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 5,
+      },
+    },
+  });
+
+
 
 
 
