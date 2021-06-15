@@ -342,6 +342,9 @@ color:#fff !important;
     .vertical_accordion li .section-title{
         transform:rotate(0) !important;
     }
+    .samsung__disply__cat .Samsung__cat__items .samsung__cat__item ul li {
+        padding-right: 11px;
+    }
 }
 
 
