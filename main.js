@@ -30,7 +30,7 @@ $(document).ready(function(){
    }
    section_uhd.on('click', toggleAccordion_uhd);
 
-   var section_lifestyle = $('.samsung__list__lifestyle .vertical_accordion li');
+   var section_lifestyle = $('.samsung__list__tvlifestyle .vertical_accordion li');
    function toggleAccordion_lifestyle() {
       section_lifestyle.removeClass('active');
       $(this).addClass('active');

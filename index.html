@@ -30,7 +30,7 @@
 
     }
 
-    .vertical_accordion li {
+    .vertical_accordion > li {
         flex: 1;
         display: flex;
         align-items: stretch;
@@ -40,9 +40,9 @@
         transition: all 0.5s ease;
     }
 
-    .vertical_accordion li:hover {
-        background: #000000;
-    }
+    /*.vertical_accordion li:hover {*/
+    /*    background: #000000;*/
+    /*}*/
 
     .vertical_accordion li.active {
         flex: 5;
@@ -70,17 +70,19 @@
         padding: 0;
         text-align: center;
         color: white;
+      transform: rotate(90deg);
+      justify-content: space-between;
     }
 
     .vertical_accordion li .section-title h2 {
         margin: 0;
-        transform: rotate(90deg);
         white-space: nowrap;
+      padding-right: 14px;
     }
 
     .vertical_accordion li .section-content {
         flex: 1;
-        display: flex;
+        /*display: flex;*/
         align-items: center;
         margin: 0;
         padding: 0;
@@ -174,38 +176,47 @@
       </li>
     </ul>
     <div class="samsung__display__list_acc">
-      <ul class="vertical_accordion">
-        <li id="samsung_newled_imagem" style="background-image: url(images/qled-imagem.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-right: 3px solid #fff;">
+      <ul class="vertical_accordion" >
+        <li id="samsung_newled_imagem" style="background-image: url(images/neoqled-imagem.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-right: 3px solid #fff;">
           <div class="section-title">
             <h2>IMAGEM</h2>
             <i class="fas fa-plus"></i>
           </div>
           <div class="section-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatum temporibus dicta
-              reprehenderit
-              tempore quisquam consequuntur porro omnis laboriosam praesentium at et sapiente, provident sit! Suscipit
-              recusandae, ab ratione dignissimos.</p>
+            <p> Detalhes nunca antes vistos e um contraste arrojado</p>
+            <ul>
+              <li>Tecnologia Quantum Matrix Pro</li>
+              <li>Processador Neo Quantum 8K</li>
+              <li>Ecrã Anti-Reflexo</li>
+            </ul>
           </div>
         </li>
         <li id="samsung_newled_design" style="background-image: url(images/neoqled-design.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; border-left: 3px solid #fff; border-right: 3px solid #fff;">
           <div class="section-title">
             <h2>DESIGN</h2>
+            <i class="fas fa-plus"></i>
           </div>
           <div class="section-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora totam delectus, eius nostrum aspernatur
-              voluptas enim fugit ipsa magni voluptatem, odio sit accusamus vel id, commodi consequuntur possimus
-              repellat
-              necessitatibus!</p>
+            <p>Design revolucionário que elimina as distrações</p>
+            <ul>
+              <li>Ecrã e Design Infinito</li>
+              <li>Suporte de Parede Slim Fit</li>
+              <li>Slim One Connect Integrável</li>
+            </ul>
           </div>
         </li>
         <li id="samsung_newled_som" style="background-image: url(images/neoqled-som.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; border-left: 3px solid #fff; border-right: 3px solid #fff;">
           <div class="section-title">
             <h2>SOM</h2>
+            <i class="fas fa-plus"></i>
           </div>
           <div class="section-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur saepe vel facilis quae nihil ad
-              aspernatur
-              ex delectus. Tenetur nulla voluptates similique quos, quia possimus, magnam esse natus quis ipsa.</p>
+            <p>Inovações Sonoras Redefinidas</p>
+            <ul>
+              <li>Object Tracking Sound Pro</li>
+              <li>Som SpaceFit</li>
+              <li>Q-Symphony</li>
+            </ul>
           </div>
         </li>
 
@@ -283,7 +294,7 @@
 <section class="samsung__list__qled br-section">
   <div class="samsung__container">
     <ul class="samsung__display__list">
-      <li data-sec="samsung_qled_imagem">
+      <li data-sec="samsung_qled_imagem" >
         <div class="sumsung__display_heading">
           <p>IMAGEM</p>
           <i class="fas fa-plus"></i>
@@ -316,36 +327,47 @@
     </ul>
     <div class="samsung__display__list_acc">
       <ul class="vertical_accordion">
-        <li id="samsung_qled_imagem">
+        <li id="samsung_qled_imagem" style="background-image: url(images/qled-imagem.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-right: 3px solid #fff;">
           <div class="section-title">
             <h2>IMAGEM</h2>
+            <i class="fas fa-plus"></i>
           </div>
           <div class="section-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatum temporibus dicta
-              reprehenderit
-              tempore quisquam consequuntur porro omnis laboriosam praesentium at et sapiente, provident sit! Suscipit
-              recusandae, ab ratione dignissimos.</p>
+            <p>Brilho duradouro, cores infinitas </p>
+            <ul>
+              <li>100% Volume de Cor com Tecnologia Quantum Dot</li>
+              <li> Quantum HDR</li>
+              <li> Ângulo de Visualização Amplo</li>
+            </ul>
           </div>
         </li>
-        <li id="samsung_qled_som">
+        <li id="samsung_qled_som" style="background-image: url(images/qled-som.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-left: 3px solid #fff;  border-right: 3px solid #fff;">
           <div class="section-title">
             <h2>SOM</h2>
+            <i class="fas fa-plus"></i>
           </div>
           <div class="section-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora totam delectus, eius nostrum aspernatur
-              voluptas enim fugit ipsa magni voluptatem, odio sit accusamus vel id, commodi consequuntur possimus
-              repellat
-              necessitatibus!</p>
+            <p>Experiência de Som perfeitamente orquestrada </p>
+            <ul>
+              <li>Som Adaptativo </li>
+              <li>Active Voice Amplifier (AVA) </li>
+              <li>Q-Symphony </li>
+
+            </ul>
           </div>
         </li>
-        <li id="samsung_qled_gaming">
+        <li id="samsung_qled_gaming" style="background-image: url(images/qled-gamming.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-left: 3px solid #fff;  border-right: 3px solid #fff;">
           <div class="section-title">
             <h2>GAMMING</h2>
+            <i class="fas fa-plus"></i>
           </div>
           <div class="section-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur saepe vel facilis quae nihil ad
-              aspernatur
-              ex delectus. Tenetur nulla voluptates similique quos, quia possimus, magnam esse natus quis ipsa.</p>
+            <p>A TV que muda as regras do jogo</p>
+            <ul>
+              <li> Visualização de Jogo Ultra Ampla & Barra de Jogo </li>
+              <li> Motion Xcelerator Turbo </li>
+              <li>  Auto Low Latency Mode </li>
+            </ul>
           </div>
         </li>
 
@@ -456,36 +478,44 @@
     </ul>
     <div class="samsung__display__list_acc">
       <ul class="vertical_accordion">
-        <li id="samsung_uhd_imagem">
+        <li id="samsung_uhd_imagem" style="background-image: url(images/uhd-imagem.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-left: 3px solid #fff;  border-right: 3px solid #fff;">
           <div class="section-title">
             <h2>IMAGEM</h2>
           </div>
           <div class="section-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatum temporibus dicta
-              reprehenderit
-              tempore quisquam consequuntur porro omnis laboriosam praesentium at et sapiente, provident sit! Suscipit
-              recusandae, ab ratione dignissimos.</p>
+            <p>Cor crystal vibrante num perfil fino</p>
+            <ul>
+              <li>Dynamic Crystal Color</li>
+              <li>Processador Crystal 4K</li>
+              <li>  HDR</li>
+
+            </ul>
           </div>
         </li>
-        <li id="samsung_uhd_smart">
+        <li id="samsung_uhd_smart" style="background-image: url(images/uhd-smart.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-left: 3px solid #fff;  border-right: 3px solid #fff;">
           <div class="section-title">
             <h2>SMART</h2>
           </div>
           <div class="section-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora totam delectus, eius nostrum aspernatur
-              voluptas enim fugit ipsa magni voluptatem, odio sit accusamus vel id, commodi consequuntur possimus
-              repellat
-              necessitatibus!</p>
+            <p>Começa a tua experiência inteligente 4K </p>
+            <ul>
+              <li>Samsung TV Plus</li>
+              <li> Comando Eco</li>
+              <li>SmartThings</li>
+            </ul>
           </div>
         </li>
-        <li id="samsung_uhd_experience">
+        <li id="samsung_uhd_experience" style="background-image: url(images/uhd-experiencia.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-left: 3px solid #fff;  border-right: 3px solid #fff;">
           <div class="section-title">
             <h2>EXPERIÊNCIA</h2>
           </div>
           <div class="section-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur saepe vel facilis quae nihil ad
-              aspernatur
-              ex delectus. Tenetur nulla voluptates similique quos, quia possimus, magnam esse natus quis ipsa.</p>
+            <p>Aproveita o máximo da TV no conforto da tua casa </p>
+            <ul>
+              <li>PC na TV</li>
+              <li> Chamadas de Video com Google Duo</li>
+              <li> Multi View/Tap View</li>
+            </ul>
           </div>
         </li>
 
@@ -493,7 +523,6 @@
     </div>
   </div>
 </section>
-
 <!-- this section for TV's Lifestyle -->
 <section class="samsung__list__tvlifestyle br-section">
   <div class="samsung__container">
@@ -531,36 +560,31 @@
     </ul>
     <div class="samsung__display__list_acc">
       <ul class="vertical_accordion">
-        <li id="samsung_lifestyle_lifestyle">
-          <div class="section-title">
-            <h2>Tv's Lifestyle</h2>
-          </div>
-          <div class="section-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatum temporibus dicta
-              reprehenderit
-              tempore quisquam consequuntur porro omnis laboriosam praesentium at et sapiente, provident sit! Suscipit
-              recusandae, ab ratione dignissimos.</p>
-          </div>
-        </li>
-        <li id="samsung_lifestyle_frame">
+
+        <li id="samsung_lifestyle_frame" style="background-image: url(images/tv-theframe.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-left: 3px solid #fff;  border-right: 3px solid #fff;">
           <div class="section-title">
             <h2>THE FRAME</h2>
           </div>
           <div class="section-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora totam delectus, eius nostrum aspernatur
-              voluptas enim fugit ipsa magni voluptatem, odio sit accusamus vel id, commodi consequuntur possimus
-              repellat
-              necessitatibus!</p>
+            <p>Cria a tua própria TV</p>
+            <ul>
+              <li>Modo Arte e Art Store</li>
+              <li>Moldura Personalizável com design moderno</li>
+              <li> Suporte No Gap e Ligações Minimalistas</li>
+            </ul>
           </div>
         </li>
-        <li id="samsung_lifestyle_sero">
+        <li id="samsung_lifestyle_sero" style="background-image: url(images/tv-sero.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-left: 3px solid #fff;  border-right: 3px solid #fff;">
           <div class="section-title">
             <h2>THE SERO</h2>
           </div>
           <div class="section-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur saepe vel facilis quae nihil ad
-              aspernatur
-              ex delectus. Tenetur nulla voluptates similique quos, quia possimus, magnam esse natus quis ipsa.</p>
+            <p>Entretenimento móvel, melhor na TV</p>
+            <ul>
+              <li> Ecrã rotativo em 100% Volume de Cor  </li>
+              <li> Som Poderoso  </li>
+              <li>Tap View       </li>
+            </ul>
           </div>
         </li>
 
