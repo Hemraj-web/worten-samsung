@@ -120,6 +120,16 @@
 }
 
 
+/* neo gled inside design css open  */
+
+.vertical_accordion .section-title {
+    display: flex;
+    justify-content: center;
+}
+.vertical_accordion li.active h2{
+color:#fff !important;
+}
+/* neo gled inside design css close  */
 
 /* qled qled */
 .samsung__list__qled {

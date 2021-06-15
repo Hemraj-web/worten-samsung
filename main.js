@@ -6,14 +6,20 @@ $(document).ready(function(){
    // });
 
 
-   var section = $('.vertical_accordion li');
+   var section_newqled = $('.samsung__list__newled .vertical_accordion li');
 
-   function toggleAccordion() {
-      section.removeClass('active');
+   function toggleAccordion_newqled() {
+      section_newqled.removeClass('active');
       $(this).addClass('active');
    }
+   section_newqled.on('click', toggleAccordion_newqled);
 
-   section.on('click', toggleAccordion);
+   var section_qled = $('.samsung__list__qled .vertical_accordion li');
+   function toggleAccordion_qled() {
+      section_qled.removeClass('active');
+      $(this).addClass('active');
+   }
+   section_qled.on('click', toggleAccordion_qled);
 
 
    var brsec = $('.samsung__lists li');
@@ -33,8 +39,8 @@ $(document).ready(function(){
       $(this).addClass('active');
       var sec_id = $(this).data('sec');
       $("#"+sec_id).addClass('active');
-          $('.samsung__display__list_acc').show();
-          $("#samsung__display__list").hide();
+      $(this).parent().parent().find('.samsung__display__list_acc').show();
+      $(this).parent().parent().find(".samsung__display__list").hide();
    }
 
    samsung_display_list.on('click', toggleSamsungDisplay);
