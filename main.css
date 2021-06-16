@@ -420,7 +420,15 @@
 .samsung__disply__cat .Samsung__cat__items .samsung__cat__item ul li:last-child {
     padding-right: unset;
 }
-
+.samsung__mob_info{
+    display:none;
+    background: #000;
+    color: #fff;
+    padding: 19px;
+}
+.samsung__mob_info h3{
+    margin-bottom:10px;
+}
 @media screen and (max-width: 575.98px) {
     .vertical_accordion {
         flex-direction: column;
@@ -445,6 +453,10 @@
     .samsung__list__newled .samsung__display__list {
         flex-direction: column;
         justify-content: space-evenly;
+    }
+
+    .samsung__mob_info{
+        display:block;
     }
 
     .samsung__display__list li {

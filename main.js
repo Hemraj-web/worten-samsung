@@ -61,6 +61,7 @@ $(document).ready(function(){
       $(this).addClass('active');
       var sec_id = $(this).data('sec');
       $("#"+sec_id).addClass('active');
+      $("#"+sec_id).siblings('li').removeClass('active');
       $(this).parent().parent().find('.samsung__display__list_acc').addClass('active');
       $(this).parent().parent().find(".samsung__display__list").hide();
    }
