@@ -20,22 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27d97c04-75ff-43e7-a17a-86cb2be4e50f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/qled-card.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/qled-q60a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/qled-q70a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/qled-q8oa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/tv-card.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/tv-the-frame.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/tv-the-sero.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/uhd-au7175.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/uhd-au9005.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/uhd-card.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/uhd-tu7025.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samsung.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/neoqled-card.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/neoqled-card.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
