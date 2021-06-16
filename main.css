@@ -42,7 +42,7 @@
 
 .samsung__image__wrap .samsung__logo img{
     width: 100%;
-    max-width: 300px;
+    max-width: 265px;
     height: auto;
     padding-left: 10%;
     padding-top: 10%;
@@ -245,9 +245,7 @@ color:#fff !important;
     padding-top:15px;
 }
 
-.samsung__info {
-    display: none;
-}
+
 
 
 
@@ -329,6 +327,10 @@ color:#fff !important;
     background: #a61410;
 }
 
+.samsung__disply__cat .Samsung__cat__items .samsung__cat__item ul li:last-child{
+    padding-right: unset;
+}
+
 @media screen and (max-width: 575.98px) {
     .vertical_accordion{
         flex-direction:column;
@@ -364,6 +366,36 @@ color:#fff !important;
         width: 100%;
     }
 
+    .vertical_accordion li.active .section-content {
+        margin-top: 8px !important;
+    }
+
+    .vertical_accordion li.active .section-content {
+        padding: 12px;
+    }
+    .samsung__overlay__logo {
+        display: none;
+    }
+
+    .samsung__cat__item .samsung__btn{
+        padding: 5px 9px;
+        font-size: 14px;
+    }
+    .samsung__info {
+        display: none;
+    }
+
+    .samsung__disply__cat .Samsung__cat__items .samsung__cat__item ul {
+        font-size: 10px;
+    }
+
+    .samsung__disply__cat .Samsung__cat__items .samsung__cat__item ul li {
+        padding-right: 3px;
+    }
+
+    .vertical_accordion li.active {
+        flex:45;
+    }
 }
 
 

@@ -62,7 +62,8 @@
 
     .vertical_accordion li.active .section-content {
         flex: 4;
-        opacity: 1;
+        /*opacity: 1;*/
+      display: block;
         transform: scaleX(1);
         color: #000000;
     }
@@ -92,7 +93,8 @@
         align-items: center;
         margin: 0;
         padding: 0;
-        opacity: 0;
+      /*opacity: 0;*/
+        display: none;
         transition: all 0.25s 0.1s ease-out;
     }
     .vertical_accordion li.active .section-title .fa-plus::before{
@@ -112,7 +114,6 @@
 </section>
 
 <!-- -------------- TOp slider section Close  ----------------  -->
-
 <!-- -------------- main body  section open  ----------------  -->
 <section class="samsung__body__part">
   <div class="samsung__container">
@@ -168,25 +169,21 @@
           <p>DESIGN</p>
           <i class="fas fa-plus"></i>
         </div>
-        <div class="samsung__info">
-          <h3>NEO QLED 8K</h3>
-          <p>A Nova Geração. <br/> Evolução sem limites</p>
-        </div>
+
       </li>
       <li data-sec="samsung_newled_som">
         <div class="sumsung__display_heading">
           <p>SOM</p>
           <i class="fas fa-plus"></i>
         </div>
-        <div class="samsung__info">
-          <h3>NEO QLED 8K</h3>
-          <p>A Nova Geração. <br/> Evolução sem limites</p>
-        </div>
+
       </li>
     </ul>
     <div class="samsung__display__list_acc">
       <ul class="vertical_accordion" >
+
         <li id="samsung_newled_imagem" style="background-image: url(images/neoqled-imagem.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-right: 3px solid #fff;">
+
           <div class="section-title">
             <h2>IMAGEM</h2>
             <i class="fas fa-plus"></i>
@@ -319,8 +316,8 @@
           <i class="fas fa-plus"></i>
         </div>
         <div class="samsung__info">
-          <h3>NEO QLED 8K</h3>
-          <p>A Nova Geração. <br/> Evolução sem limites</p>
+          <h3>QLED 8K/4K</h3>
+          <p>Uma vasta amplitude de <br> cor e som</p>
         </div>
       </li>
       <li data-sec="samsung_qled_som">
@@ -328,20 +325,14 @@
           <p>SOM</p>
           <i class="fas fa-plus"></i>
         </div>
-        <div class="samsung__info">
-          <h3>NEO QLED 8K</h3>
-          <p>A Nova Geração. <br/> Evolução sem limites</p>
-        </div>
+
       </li>
       <li data-sec="samsung_qled_gaming">
         <div class="sumsung__display_heading">
           <p>GAMMING</p>
           <i class="fas fa-plus"></i>
         </div>
-        <div class="samsung__info">
-          <h3>NEO QLED 8K</h3>
-          <p>A Nova Geração. <br/> Evolução sem limites</p>
-        </div>
+
       </li>
     </ul>
     <div class="samsung__display__list_acc">
@@ -406,51 +397,45 @@
       <div class="Samsung__cat__items swiper-wrapper">
         <div class="samsung__cat__item swiper-slide">
           <div class="samsung__cat__image">
-            <img src="images/lap.png" alt="">
-            <div class="samsung__overlay__logo">
-              <img src="images/samsung-logo.png" alt="">
-            </div>
+            <img src="images/qled-q8oa.png" alt="">
+
           </div>
-          <h4>AU9006</h4>
+          <p>Q80A </p>
           <ul>
+            <li>85"</li>
             <li>75"</li>
             <li>65"</li>
             <li>55"</li>
-            <li>50"</li>
-            <li>43"</li>
+            <li>49"</li>
+
           </ul>
           <div class="samsung__cat__btn">
-            <a href="#" class="samsung__btn">ver artigos</a>
+            <a href="https://www.worten.pt/tv-video-e-som/tvs/melhores-tvs-ultima-geracao-e-tecnologia/samsung/produtos?Serie-de-fabricante=Q80A" class="samsung__btn">ver artigos</a>
           </div>
         </div>
         <div class="samsung__cat__item swiper-slide">
           <div class="samsung__cat__image">
-            <img src="images/lap.png" alt="">
-            <div class="samsung__overlay__logo">
-              <img src="images/samsung-logo.png" alt="">
-            </div>
+            <img src="images/qled-q70a.png" alt="">
+
           </div>
-          <h4>AU9005</h4>
+          <p>Q70A / 75A</p>
           <ul>
             <li>75"</li>
             <li>65"</li>
             <li>55"</li>
-            <li>50"</li>
-            <li>43"</li>
           </ul>
           <div class="samsung__cat__btn">
-            <a href="#" class="samsung__btn">ver artigos</a>
+            <a href="https://www.worten.pt/tv-video-e-som/tvs/melhores-tvs-ultima-geracao-e-tecnologia/samsung/produtos?Serie-de-fabricante=Q70&Serie-de-fabricante=Q75A" class="samsung__btn">ver artigos</a>
           </div>
         </div>
         <div class="samsung__cat__item swiper-slide">
           <div class="samsung__cat__image">
-            <img src="images/lap.png" alt="">
-            <div class="samsung__overlay__logo">
-              <img src="images/samsung-logo.png" alt="">
-            </div>
+            <img src="images/qled-q60a.png" alt="">
+
           </div>
-          <h4>AU9005</h4>
+          <p>Q60A / 68A</p>
           <ul>
+            <li>85"</li>
             <li>75"</li>
             <li>65"</li>
             <li>55"</li>
@@ -458,7 +443,7 @@
             <li>43"</li>
           </ul>
           <div class="samsung__cat__btn">
-            <a href="#" class="samsung__btn">ver artigos</a>
+            <a href="https://www.worten.pt/tv-video-e-som/tvs/melhores-tvs-ultima-geracao-e-tecnologia/samsung/produtos?Serie-de-fabricante=Q60A" class="samsung__btn">ver artigos</a>
           </div>
         </div>
       </div>
@@ -477,8 +462,8 @@
           <i class="fas fa-plus"></i>
         </div>
         <div class="samsung__info">
-          <h3>NEO QLED 8K</h3>
-          <p>A Nova Geração. <br/> Evolução sem limites</p>
+          <h3>UHD</h3>
+          <p>Opte por uma imagem <br/> deslumbrante em 4K</p>
         </div>
       </li>
       <li data-sec="samsung_uhd_smart">
@@ -486,20 +471,14 @@
           <p>SMART</p>
           <i class="fas fa-plus"></i>
         </div>
-        <div class="samsung__info">
-          <h3>NEO QLED 8K</h3>
-          <p>A Nova Geração. <br/> Evolução sem limites</p>
-        </div>
+
       </li>
       <li data-sec="samsung_uhd_experience">
         <div class="sumsung__display_heading">
           <p>EXPERIÊNCIA</p>
           <i class="fas fa-plus"></i>
         </div>
-        <div class="samsung__info">
-          <h3>NEO QLED 8K</h3>
-          <p>A Nova Geração. <br/> Evolução sem limites</p>
-        </div>
+
       </li>
     </ul>
     <div class="samsung__display__list_acc">
@@ -555,12 +534,10 @@
       <div class="Samsung__cat__items swiper-wrapper">
         <div class="samsung__cat__item swiper-slide">
           <div class="samsung__cat__image">
-            <img src="images/lap.png" alt="">
-            <div class="samsung__overlay__logo">
-              <img src="images/samsung-logo.png" alt="">
-            </div>
+            <img src="images/uhd-au9005.png" alt="">
+
           </div>
-          <h4>AU9006</h4>
+          <p>AU9005</p>
           <ul>
             <li>75"</li>
             <li>65"</li>
@@ -569,18 +546,17 @@
             <li>43"</li>
           </ul>
           <div class="samsung__cat__btn">
-            <a href="#" class="samsung__btn">ver artigos</a>
+            <a href="https://www.worten.pt/tv-video-e-som/tvs/melhores-tvs-ultima-geracao-e-tecnologia/samsung/produtos?Serie-de-fabricante=AU9005" class="samsung__btn">ver artigos</a>
           </div>
         </div>
         <div class="samsung__cat__item swiper-slide">
           <div class="samsung__cat__image">
-            <img src="images/lap.png" alt="">
-            <div class="samsung__overlay__logo">
-              <img src="images/samsung-logo.png" alt="">
-            </div>
+            <img src="images/uhd-au7175.png" alt="">
+
           </div>
-          <h4>AU9005</h4>
+          <p>AU7175</p>
           <ul>
+            <li>85"</li>
             <li>75"</li>
             <li>65"</li>
             <li>55"</li>
@@ -588,17 +564,15 @@
             <li>43"</li>
           </ul>
           <div class="samsung__cat__btn">
-            <a href="#" class="samsung__btn">ver artigos</a>
+            <a href="https://www.worten.pt/tv-video-e-som/tvs/melhores-tvs-ultima-geracao-e-tecnologia/samsung/produtos?Serie-de-fabricante=AU7175" class="samsung__btn">ver artigos</a>
           </div>
         </div>
         <div class="samsung__cat__item swiper-slide">
           <div class="samsung__cat__image">
-            <img src="images/lap.png" alt="">
-            <div class="samsung__overlay__logo">
-              <img src="images/samsung-logo.png" alt="">
-            </div>
+            <img src="images/uhd-tu7025.png" alt="">
+
           </div>
-          <h4>AU9005</h4>
+          <p>TU7025</p>
           <ul>
             <li>75"</li>
             <li>65"</li>
@@ -607,7 +581,7 @@
             <li>43"</li>
           </ul>
           <div class="samsung__cat__btn">
-            <a href="#" class="samsung__btn">ver artigos</a>
+            <a href="https://www.worten.pt/tv-video-e-som/tvs/melhores-tvs-ultima-geracao-e-tecnologia/samsung/produtos?Serie-de-fabricante=TU7025" class="samsung__btn">ver artigos</a>
           </div>
         </div>
       </div>
@@ -625,8 +599,8 @@
           <i class="fas fa-plus"></i>
         </div>
         <div class="samsung__info">
-          <h3>NEO QLED 8K</h3>
-          <p>A Nova Geração. <br/> Evolução sem limites</p>
+          <h3>TV’s Lifestyle </h3>
+
         </div>
       </li>
       <li data-sec="samsung_lifestyle_frame">
@@ -634,20 +608,14 @@
           <p>THE FRAME</p>
           <i class="fas fa-plus"></i>
         </div>
-        <div class="samsung__info">
-          <h3>NEO QLED 8K</h3>
-          <p>A Nova Geração. <br/> Evolução sem limites</p>
-        </div>
+
       </li>
       <li data-sec="samsung_lifestyle_sero">
         <div class="sumsung__display_heading">
           <p>THE SERO</p>
           <i class="fas fa-plus"></i>
         </div>
-        <div class="samsung__info">
-          <h3>NEO QLED 8K</h3>
-          <p>A Nova Geração. <br/> Evolução sem limites</p>
-        </div>
+
       </li>
     </ul>
     <div class="samsung__display__list_acc">
@@ -689,61 +657,26 @@
       <div class="Samsung__cat__items swiper-wrapper">
         <div class="samsung__cat__item swiper-slide">
           <div class="samsung__cat__image">
-            <img src="images/lap.png" alt="">
-            <div class="samsung__overlay__logo">
-              <img src="images/samsung-logo.png" alt="">
-            </div>
+            <img src="images/tv-the-frame.png" alt="">
+
           </div>
-          <h4>AU9006</h4>
-          <ul>
-            <li>75"</li>
-            <li>65"</li>
-            <li>55"</li>
-            <li>50"</li>
-            <li>43"</li>
-          </ul>
+          <p>The Frame</p>
           <div class="samsung__cat__btn">
-            <a href="#" class="samsung__btn">ver artigos</a>
+            <a href="https://www.worten.pt/tv-video-e-som/tvs/melhores-tvs-ultima-geracao-e-tecnologia/samsung/produtos?Serie-de-fabricante=LS03A" class="samsung__btn">ver artigos</a>
           </div>
         </div>
         <div class="samsung__cat__item swiper-slide">
           <div class="samsung__cat__image">
-            <img src="images/lap.png" alt="">
-            <div class="samsung__overlay__logo">
-              <img src="images/samsung-logo.png" alt="">
-            </div>
+            <img src="images/tv-the-sero.png" alt="">
+
           </div>
-          <h4>AU9005</h4>
-          <ul>
-            <li>75"</li>
-            <li>65"</li>
-            <li>55"</li>
-            <li>50"</li>
-            <li>43"</li>
-          </ul>
+          <p>The Sero</p>
+
           <div class="samsung__cat__btn">
-            <a href="#" class="samsung__btn">ver artigos</a>
+            <a href="https://www.worten.pt/tv-video-e-som/tvs/melhores-tvs-ultima-geracao-e-tecnologia/samsung/produtos?Serie-de-fabricante=LS05T" class="samsung__btn">ver artigos</a>
           </div>
         </div>
-        <div class="samsung__cat__item swiper-slide">
-          <div class="samsung__cat__image">
-            <img src="images/lap.png" alt="">
-            <div class="samsung__overlay__logo">
-              <img src="images/samsung-logo.png" alt="">
-            </div>
-          </div>
-          <h4>AU9005</h4>
-          <ul>
-            <li>75"</li>
-            <li>65"</li>
-            <li>55"</li>
-            <li>50"</li>
-            <li>43"</li>
-          </ul>
-          <div class="samsung__cat__btn">
-            <a href="#" class="samsung__btn">ver artigos</a>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
