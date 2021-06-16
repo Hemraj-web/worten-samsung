@@ -38,6 +38,7 @@
     background-repeat: no-repeat;
    height:400px;
     width: 100%;
+    position: relative;
 }
 
 .samsung__image__wrap .samsung__logo img{
@@ -99,6 +100,7 @@
     width: 100%;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    text-transform: uppercase;
 }
 
 /*  ============ main body  section Close */
@@ -260,6 +262,7 @@ color:#fff !important;
 }
 .samsung__disply__cat .Samsung__cat__items {
     display: flex;
+    justify-content: center;
 
 
 }
@@ -395,6 +398,49 @@ color:#fff !important;
 
     .vertical_accordion li.active {
         flex:45;
+    }
+    .samsung__image__wrap .samsung__text {
+        position: absolute;
+        bottom: 30%;
+    }
+
+    .vertical_accordion li .section-title h2 {
+        font-size: 15px;
+        font-weight: normal;
+    }
+    .samsung__list__qled .samsung__display__list,
+    .samsung__list__uhd .samsung__display__list,
+    .samsung__list__tvlifestyle .samsung__display__list,
+    .samsung__list__newled .samsung__display__list {
+        min-height: 215px;
+    }
+    li#samsung_lifestyle_frame.active,
+    li#samsung_uhd_imagem.active,
+    li#samsung_qled_imagem.active,
+    li#samsung_newled_imagem.active{
+        border-right: 0 !important;
+    }
+    li#samsung_lifestyle_frame,
+    li#samsung_uhd_imagem,
+    li#samsung_qled_imagem,
+    li#samsung_newled_imagem{
+        border-right: 0 !important;
+        border-bottom: 2px solid #fff;
+    }
+
+    li#samsung_qled_gaming,
+    li#samsung_qled_som,
+    li#samsung_newled_som,
+    li#samsung_newled_design{
+        border-right: 0 !important;
+        border-left: 0 !important;
+        border-bottom: 2px solid #fff;
+    }
+
+
+    li#samsung_newled_design.active{
+        border-right: 0 !important;
+        border-left: 0 !important;
     }
 }
 
