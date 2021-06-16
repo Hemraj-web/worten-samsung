@@ -1,28 +1,30 @@
-.som1{
-    display:none;
-}
-.som1.active{
-    display:block;
-}
-.accordion-some .acc-wrapper{
-    display:none;
-}
-.accordion-some.active .acc-wrapper{
-    display:block;
+.som1 {
+    display: none;
 }
 
+.som1.active {
+    display: block;
+}
+
+.accordion-some .acc-wrapper {
+    display: none;
+}
+
+.accordion-some.active .acc-wrapper {
+    display: block;
+}
 
 
 /*  ============ global css for  all section Open*/
-*, *::before, *::after{
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.samsung__container{
+.samsung__container {
     width: 100%;
-    max-width:1300px;
+    max-width: 1300px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -31,26 +33,27 @@
 
 /*  ============ Top banner slider  section Open*/
 
-.samsung__image__wrap{
-   background-image: url("images/samsung-banner-top.jpg");
+.samsung__image__wrap {
+    background-image: url("images/samsung-banner-top.jpg");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-   height:400px;
+    height: 400px;
     width: 100%;
     position: relative;
 }
 
-.samsung__image__wrap .samsung__logo img{
+.samsung__image__wrap .samsung__logo img {
     width: 100%;
     max-width: 265px;
     height: auto;
     padding-left: 10%;
     padding-top: 10%;
 }
-.samsung__image__wrap .samsung__text{
-    color:#fff;
-    padding-left:10%;
+
+.samsung__image__wrap .samsung__text {
+    color: #fff;
+    padding-left: 10%;
     padding-top: 5%;
 }
 
@@ -61,6 +64,7 @@
 .samsung__body__part {
     margin-top: 30px;
 }
+
 .samsung__top__cat ul {
     display: flex;
     column-gap: 15px;
@@ -68,15 +72,16 @@
     align-items: baseline
 }
 
-.samsung__top__cat > ul > li.active{
-    border-bottom:30px solid #000;
+.samsung__top__cat > ul > li.active {
+    border-bottom: 30px solid #000;
 }
 
-.samsung__top__cat > ul > li.active p{
+.samsung__top__cat > ul > li.active p {
     border-bottom-left-radius: unset;
     border-bottom-right-radius: unset;
 
 }
+
 .samsung__top__cat > ul > li {
     list-style: none;
     text-align: center;
@@ -84,14 +89,15 @@
     position: relative;
 }
 
-.samsung__lists .samsung__list__item img{
+.samsung__lists .samsung__list__item img {
     max-width: 100%;
-  border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
     -webkit-border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     -webkit-border-top-right-radius: 10px;
 }
-.samsung__lists .samsung__list__item p{
+
+.samsung__lists .samsung__list__item p {
     background-color: #000;
     color: #fff;
     position: absolute;
@@ -107,13 +113,52 @@
 /*  ============  List Items display section Open  */
 
 /* neo qled */
-.samsung__list__newled {
-  display: none;
+@-webkit-keyframes anim {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    1% {
+        display: block;
+        opacity: 0;
+        /*transform: scale(0);*/
+    }
+    100% {
+        opacity: 1;
+        /*transform: scale(1);*/
+    }
 }
+
+@keyframes anim {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    1% {
+        display: block;
+        opacity: 0;
+        /*transform: scale(0);*/
+    }
+    100% {
+        opacity: 1;
+        /*transform: scale(1);*/
+    }
+}
+
+.samsung__list__newled {
+    display: none;
+    opacity: 0;
+    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+}
+
 .samsung__list__newled.active {
     display: block;
+    opacity: 1;
+    -webkit-animation: anim 0.7s ease-in-out;
+    animation: anim 0.7s ease-in-out;
 }
-.samsung__list__newled .samsung__display__list{
+
+.samsung__list__newled .samsung__display__list {
     background-image: url("images/qled-8l-display.jpg");
     min-height: 555px;
     background-size: cover;
@@ -127,49 +172,60 @@
 .vertical_accordion li.active .section-title {
     transform: unset;
 }
-.vertical_accordion li.active{
-  display: block;
+
+.vertical_accordion li.active {
+    display: block;
 }
+
 .vertical_accordion .section-title {
     display: flex;
     justify-content: center;
 }
-.vertical_accordion li.active h2{
-color:#fff !important;
+
+.vertical_accordion li.active h2 {
+    color: #fff !important;
     font-size: 1rem;
     font-weight: normal;
 }
 
-.vertical_accordion li.active .section-content{
+.vertical_accordion li.active .section-content {
     margin-top: 55px !important;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: #fff !important;
     width: 85%;
-    border-radius:15px;
+    border-radius: 15px;
     padding: 20px;
 }
 
-.vertical_accordion li.active .section-content p{
-  padding-bottom: 10px;
+.vertical_accordion li.active .section-content p {
+    padding-bottom: 10px;
 }
 
-.vertical_accordion li.active .section-content p{
+.vertical_accordion li.active .section-content p {
     padding-left: 5%;
 }
-.vertical_accordion li.active .section-content ul{
-  padding-left: 8%;
+
+.vertical_accordion li.active .section-content ul {
+    padding-left: 8%;
 }
+
 /* neo gled inside design css close  */
 
 /* qled qled */
 .samsung__list__qled {
     display: none;
-}
-.samsung__list__qled.active {
-    display: block;
+    opacity: 0;
+    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
 }
 
-.samsung__list__qled .samsung__display__list{
+.samsung__list__qled.active {
+    display: block;
+    opacity: 1;
+    -webkit-animation: anim 0.7s ease-in-out;
+    animation: anim 0.7s ease-in-out;
+}
+
+.samsung__list__qled .samsung__display__list {
     background-image: url("images/qled-display.jpg");
     min-height: 555px;
     background-size: cover;
@@ -181,10 +237,16 @@ color:#fff !important;
 
 /* uhd */
 .samsung__list__uhd {
-  display: none;
+    display: none;
+    opacity: 0;
+    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
 }
-.samsung__list__uhd.active{
+
+.samsung__list__uhd.active {
     display: block;
+    opacity: 1;
+    -webkit-animation: anim 0.7s ease-in-out;
+    animation: anim 0.7s ease-in-out;
 }
 
 .samsung__list__uhd .samsung__display__list {
@@ -199,16 +261,35 @@ color:#fff !important;
 
 }
 
-/* Tv's lifestyle */
-.samsung__list__tvlifestyle{
+/* samsung__display__list_acc */
+.samsung__display__list_acc {
     display: none;
+    opacity: 0;
+    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
 }
 
-.samsung__list__tvlifestyle.active{
+.samsung__display__list_acc.active {
     display: block;
+    opacity: 1;
+    -webkit-animation: anim 0.7s ease-in-out;
+    animation: anim 0.7s ease-in-out;
 }
 
-.samsung__list__tvlifestyle   .samsung__display__list {
+/* Tv's lifestyle */
+.samsung__list__tvlifestyle {
+    display: none;
+    opacity: 0;
+    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+}
+
+.samsung__list__tvlifestyle.active {
+    display: block;
+    opacity: 1;
+    -webkit-animation: anim 0.7s ease-in-out;
+    animation: anim 0.7s ease-in-out;
+}
+
+.samsung__list__tvlifestyle .samsung__display__list {
     background-image: url("images/tv-lifestyle-display.jpg");
     min-height: 555px;
     background-size: cover;
@@ -219,19 +300,20 @@ color:#fff !important;
     opacity: 1;
 }
 
-.samsung__display__list img{
-   background-size: cover;
+.samsung__display__list img {
+    background-size: cover;
     background-position: center;
     max-width: 100%;
     width: 100%;
 }
 
-.samsung__display__list li{
+.samsung__display__list li {
     color: #fff;
     list-style: none;
     width: 100%;
-    border-right:2px solid #fff;
+    border-right: 2px solid #fff;
 }
+
 .sumsung__display_heading {
     display: flex;
     justify-content: space-between;
@@ -243,12 +325,10 @@ color:#fff !important;
     padding: 26px;
 
 }
-.samsung__display__list .samsung__info p{
-    padding-top:15px;
+
+.samsung__display__list .samsung__info p {
+    padding-top: 15px;
 }
-
-
-
 
 
 /*  ============  List Items display section Close  */
@@ -260,6 +340,7 @@ color:#fff !important;
     padding-top: 15px;
     padding-bottom: 25px;
 }
+
 .samsung__disply__cat .Samsung__cat__items {
     display: flex;
     justify-content: center;
@@ -268,7 +349,7 @@ color:#fff !important;
 }
 
 
-.samsung__disply__cat .Samsung__cat__items .samsung__cat__item img{
+.samsung__disply__cat .Samsung__cat__items .samsung__cat__item img {
     width: 100%;
     height: auto;
 
@@ -280,33 +361,37 @@ color:#fff !important;
     max-width: 85%;
     margin: 0 auto;
 }
-.samsung__overlay__logo img{
+
+.samsung__overlay__logo img {
     width: 100%;
     height: auto;
     max-width: 100px;
 
 }
+
 .samsung__overlay__logo {
     position: absolute;
     top: 15%;
     left: 10%;
 }
-.samsung__disply__cat .Samsung__cat__items .samsung__cat__item ul li{
+
+.samsung__disply__cat .Samsung__cat__items .samsung__cat__item ul li {
     list-style: none;
     padding-right: 20px;
     display: inline-block;
     color: #fff;
 
 }
+
 .samsung__disply__cat .Samsung__cat__items .samsung__cat__item ul {
     display: table;
     margin: 0 auto;
     padding-top: 10px;
 }
 
-.samsung__disply__cat .Samsung__cat__items .samsung__cat__item p{
+.samsung__disply__cat .Samsung__cat__items .samsung__cat__item p {
     text-align: center;
-    color:#fff;
+    color: #fff;
     text-transform: uppercase;
 }
 
@@ -315,52 +400,58 @@ color:#fff !important;
     text-align: center;
     padding-top: 10px;
 }
-.samsung__cat__item .samsung__btn{
+
+.samsung__cat__item .samsung__btn {
     background-color: #e41a15;
-    padding:10px 15px;
+    padding: 10px 15px;
     display: inline-block;
     border-bottom: 4px solid #a61410;
-    color:#fff;
+    color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    transition:all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
 
 }
-.samsung__cat__item .samsung__btn:hover{
+
+.samsung__cat__item .samsung__btn:hover {
     background: #a61410;
 }
 
-.samsung__disply__cat .Samsung__cat__items .samsung__cat__item ul li:last-child{
+.samsung__disply__cat .Samsung__cat__items .samsung__cat__item ul li:last-child {
     padding-right: unset;
 }
 
 @media screen and (max-width: 575.98px) {
-    .vertical_accordion{
-        flex-direction:column;
-    }
-    .vertical_accordion li .section-title h2{
-        transform:rotate(0) !important;
-    }
-    .vertical_accordion li{
-        flex-direction:column;
-    }
-    .vertical_accordion li .section-title{
-        transform:rotate(0) !important;
+    .vertical_accordion {
+        flex-direction: column;
     }
 
-/*    this css for main top toggle image */
+    .vertical_accordion li .section-title h2 {
+        transform: rotate(0) !important;
+    }
+
+    .vertical_accordion li {
+        flex-direction: column;
+    }
+
+    .vertical_accordion li .section-title {
+        transform: rotate(0) !important;
+    }
+
+    /*    this css for main top toggle image */
     .samsung__list__qled .samsung__display__list,
     .samsung__list__uhd .samsung__display__list,
     .samsung__list__tvlifestyle .samsung__display__list,
-    .samsung__list__newled .samsung__display__list{
+    .samsung__list__newled .samsung__display__list {
         flex-direction: column;
         justify-content: space-evenly;
     }
 
     .samsung__display__list li {
         border-bottom: 2px solid #fff;
-        border-right:none;
+        border-right: none;
     }
+
     .samsung__display__list li:last-child {
         border-bottom: none;
     }
@@ -376,14 +467,16 @@ color:#fff !important;
     .vertical_accordion li.active .section-content {
         padding: 12px;
     }
+
     .samsung__overlay__logo {
         display: none;
     }
 
-    .samsung__cat__item .samsung__btn{
+    .samsung__cat__item .samsung__btn {
         padding: 5px 9px;
         font-size: 14px;
     }
+
     .samsung__info {
         display: none;
     }
@@ -397,7 +490,7 @@ color:#fff !important;
     }
 
     .vertical_accordion li.active {
-        flex:45;
+        flex: 45;
     }
     .samsung__image__wrap .samsung__text {
         position: absolute;

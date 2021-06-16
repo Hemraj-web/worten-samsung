@@ -49,7 +49,7 @@ $(document).ready(function(){
       br_all_section.removeClass('active');
       $("."+topsec_id).addClass('active');
 
-      $("."+topsec_id).find('.samsung__display__list_acc').hide();
+      $("."+topsec_id).find('.samsung__display__list_acc').removeClass('active');
       $("."+topsec_id).find(".samsung__display__list").show();
    }
 
@@ -61,7 +61,7 @@ $(document).ready(function(){
       $(this).addClass('active');
       var sec_id = $(this).data('sec');
       $("#"+sec_id).addClass('active');
-      $(this).parent().parent().find('.samsung__display__list_acc').show();
+      $(this).parent().parent().find('.samsung__display__list_acc').addClass('active');
       $(this).parent().parent().find(".samsung__display__list").hide();
    }
 
