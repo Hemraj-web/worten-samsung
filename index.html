@@ -110,7 +110,7 @@
     /*-------------------------------------*/
 
     .samsung__accordion__item {
-        margin: 5px auto;
+        margin: 2px auto;
         color: #fff;
     }
 
@@ -162,7 +162,7 @@
     }
 
     .samsung__accordion__item .accordion__content {
-        padding: 30px;
+        padding: 0 30px 30px 30px;
         margin-bottom: 2px;
         font-size: 14px;
         display: none;
@@ -175,10 +175,15 @@
 
     .samsung__accordion {
         display: none;
+        opacity: 0;
+        transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
     }
 
     .samsung__accordion.active {
         display: block;
+        opacity: 1;
+        -webkit-animation: anim 0.7s ease-in-out;
+        animation: anim 0.7s ease-in-out;
     }
 
     .samsung__acc_wrapper {
@@ -203,7 +208,7 @@
         background: rgba(0, 0, 0, 0.5);
         color: #fff !important;
         border-radius: 15px;
-        padding: 0 20px 20px 20px;
+        padding: 20px;
     }
 
     @media screen and (max-width: 575.98px) {
@@ -236,25 +241,25 @@
   <div class="samsung__container">
     <div class="samsung__top__cat mySwiper">
       <ul class="samsung__lists swiper-wrapper">
-        <li class="active swiper-slide" data-topsec="samsung__list__newled">
+        <li class="active swiper-slide" id="neoqled__id" data-topsec="samsung__list__newled">
           <div class="samsung__list__item">
             <img src="images/neoqled-card.jpg" alt="">
             <p>NEO QLED</p>
           </div>
         </li>
-        <li class="swiper-slide s_qled" data-topsec="samsung__list__qled">
+        <li class="swiper-slide s_qled" id="qled__id" data-topsec="samsung__list__qled">
           <div class="samsung__list__item">
             <img src="images/qled-card.jpg" alt="">
             <p>QLED</p>
           </div>
         </li>
-        <li class="swiper-slide" data-topsec="samsung__list__uhd">
+        <li class="swiper-slide" id="uhd__id" data-topsec="samsung__list__uhd">
           <div class="samsung__list__item">
             <img src="images/uhd-card.jpg" alt="">
             <p>UHD</p>
           </div>
         </li>
-        <li class="swiper-slide" data-topsec="samsung__list__tvlifestyle">
+        <li class="swiper-slide" id="lifestyle__id" data-topsec="samsung__list__tvlifestyle">
           <div class="samsung__list__item">
             <img src="images/tv-card.jpg" alt="">
             <p>TV'S LIFESTYLE</p>
@@ -270,6 +275,9 @@
 <div class="samsung__content__wrapper" style="overflow: hidden">
   <!-- this section for neo qled-->
   <section class="samsung__list__newled br-section active">
+
+
+    <!-- ==========================   OPEN This code for Desktop version Neo LED Section  ==========================   -->
     <div class="samsung__container">
       <div class="samsung__mob_info">
         <a href="https://www.worten.pt/tv-video-e-som/tvs/melhores-tvs-ultima-geracao-e-tecnologia/samsung/produtos?Serie-de-fabricante=QN800A&Serie-de-fabricante=QN85A&Serie-de-fabricante=QN900A&Serie-de-fabricante=QN95A">
@@ -355,11 +363,16 @@
 
         </ul>
       </div>
+    </div>
+      <!-- ==========================   CLOSE  This code for Desktop version Neo LED Section  ==========================   -->
 
+
+
+      <!-- ==========================   OPEN  This code for Mobile version Neo LED Section  ==========================   -->
       <div class="samsung__acc_wrapper">
         <div class="samsung__accordion">
           <div class="samsung__accordion__item"
-               style="background-image: url(images/neoqled-imagem.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-right: 3px solid #fff;">
+               style="background-image: url(images/neoqled-imagem.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; ">
             <div class="accordion__title">
 
               <span class="accordion__title-text">IMAGEM</span>
@@ -377,7 +390,7 @@
             </div>
           </div>
           <div class="samsung__accordion__item"
-               style="background-image: url(images/neoqled-design.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; border-left: 3px solid #fff; border-right: 3px solid #fff;">
+               style="background-image: url(images/neoqled-design.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;">
             <div class="accordion__title">
 
               <span class="accordion__title-text">DESIGN</span>
@@ -395,7 +408,7 @@
             </div>
           </div>
           <div class="samsung__accordion__item"
-               style="background-image: url(images/neoqled-som.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; border-left: 3px solid #fff; border-right: 3px solid #fff;">
+               style="background-image: url(images/neoqled-som.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; ">
             <div class="accordion__title">
 
               <span class="accordion__title-text">SOM</span>
@@ -414,6 +427,8 @@
           </div>
         </div>
       </div>
+      <!-- ==========================   CLOSE  This code for Mobile version Neo LED Section  ==========================   -->
+
 
       <section class="samsung__note__text" style="color: #efefef; background: #000; padding:25px 0; padding-left: 7%;">
         <div class="samsung__container">
@@ -494,10 +509,12 @@
       </section>
       <!-- -----------------   Footer category sectio Close  ------------------------------  -->
 
-    </div>
+
   </section>
+
   <!-- this section for qled -->
   <section class="samsung__list__qled br-section">
+    <!-- ==========================   OPEN  This code for Desktop version QLED Section  ==========================   -->
     <div class="samsung__container">
       <div class="samsung__mob_info">
         <a href="https://www.worten.pt/tv-video-e-som/tvs/melhores-tvs-ultima-geracao-e-tecnologia/samsung/produtos?Serie-de-fabricante=Q60A&Serie-de-fabricante=Q70&Serie-de-fabricante=Q75A&Serie-de-fabricante=Q80A">
@@ -583,10 +600,13 @@
         </ul>
       </div>
     </div>
+    <!-- ==========================   CLOSE  This code for Desktop version  QLED Section  ==========================   -->
+
+    <!-- ==========================   OPEN  This code for Mobile version QLED Section  ==========================   -->
     <div class="samsung__acc_wrapper">
       <div class="samsung__accordion">
         <div class="samsung__accordion__item"
-             style="background-image: url(images/qled-imagem.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-right: 3px solid #fff;">
+             style="background-image: url(images/qled-imagem.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; ">
           <div class="accordion__title">
 
             <span class="accordion__title-text">IMAGEM</span>
@@ -594,17 +614,17 @@
           </div>
           <div class="accordion__content" id="qled__imagem">
             <div class="acc_content_item">
-              <p> Detalhes nunca antes vistos e um contraste arrojado</p>
+              <p>Brilho duradouro, cores infinitas </p>
               <ul>
-                <li>Tecnologia Quantum Matrix Pro</li>
-                <li>Processador Neo Quantum 8K</li>
-                <li>Ecrã Anti-Reflexo</li>
+                <li>100% Volume de Cor com Tecnologia Quantum Dot</li>
+                <li> Quantum HDR</li>
+                <li> Ângulo de Visualização Amplo</li>
               </ul>
             </div>
           </div>
         </div>
         <div class="samsung__accordion__item"
-             style="background-image: url(images/qled-som.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-left: 3px solid #fff;  border-right: 3px solid #fff;">
+             style="background-image: url(images/qled-som.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; ">
           <div class="accordion__title">
 
             <span class="accordion__title-text">SOM</span>
@@ -612,17 +632,17 @@
           </div>
           <div class="accordion__content" id="qled__som">
             <div class="acc_content_item">
-              <p>Design revolucionário que elimina as distrações</p>
+              <p>Experiência de Som perfeitamente orquestrada </p>
               <ul>
-                <li>Ecrã e Design Infinito</li>
-                <li>Suporte de Parede Slim Fit</li>
-                <li>Slim One Connect Integrável</li>
+                <li>Som Adaptativo</li>
+                <li>Active Voice Amplifier (AVA)</li>
+                <li>Q-Symphony</li>
               </ul>
             </div>
           </div>
         </div>
         <div class="samsung__accordion__item"
-             style="background-image: url(images/qled-gamming.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-left: 3px solid #fff;  border-right: 3px solid #fff;">
+             style="background-image: url(images/qled-gamming.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  ">
           <div class="accordion__title">
 
             <span class="accordion__title-text">GAMMING</span>
@@ -630,17 +650,19 @@
           </div>
           <div class="accordion__content" id="qled__gamming">
             <div class="acc_content_item">
-              <p>Inovações Sonoras Redefinidas</p>
+              <p>A TV que muda as regras do jogo</p>
               <ul>
-                <li>Object Tracking Sound Pro</li>
-                <li>Som SpaceFit</li>
-                <li>Q-Symphony</li>
+                <li> Visualização de Jogo Ultra Ampla & Barra de Jogo</li>
+                <li> Motion Xcelerator Turbo</li>
+                <li> Auto Low Latency Mode</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- ==========================   CLOSE  This code for Mobile version QLED Section  ==========================   -->
 
 
     <section class="samsung__note__text" style="color: #efefef; background: #000; padding:25px 0; padding-left: 7%;">
@@ -713,8 +735,11 @@
     <!-- -----------------   Footer category sectio Close  ------------------------------  -->
   </section>
 
+
+
   <!-- this section for UHD -->
   <section class="samsung__list__uhd br-section">
+    <!-- ==========================   OPEN  This code for DESKTOP version UHD Section  ==========================   -->
     <div class="samsung__container">
       <div class="samsung__mob_info">
         <a href="https://www.worten.pt/tv-video-e-som/tvs/melhores-tvs-ultima-geracao-e-tecnologia/samsung/produtos?Serie-de-fabricante=AU7175&Serie-de-fabricante=AU9005&Serie-de-fabricante=TU7025">
@@ -800,11 +825,13 @@
         </ul>
       </div>
     </div>
+    <!-- ==========================   CLOSE  This code for DESKTOP version UHD  Section  ==========================   -->
 
+    <!-- ==========================   OPEN  This code for Mobile version UHD Section  ==========================   -->
     <div class="samsung__acc_wrapper">
       <div class="samsung__accordion">
         <div class="samsung__accordion__item"
-             style="background-image: url(images/uhd-imagem.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;   border-right: 3px solid #fff;">
+             style="background-image: url(images/uhd-imagem.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;">
           <div class="accordion__title">
 
             <span class="accordion__title-text">IMAGEM</span>
@@ -812,17 +839,17 @@
           </div>
           <div class="accordion__content" id="uhd__imagem">
             <div class="acc_content_item">
-              <p> Detalhes nunca antes vistos e um contraste arrojado</p>
+              <p>Cor crystal vibrante num perfil fino</p>
               <ul>
-                <li>Tecnologia Quantum Matrix Pro</li>
-                <li>Processador Neo Quantum 8K</li>
-                <li>Ecrã Anti-Reflexo</li>
+                <li>Dynamic Crystal Color</li>
+                <li>Processador Crystal 4K</li>
+                <li> HDR</li>
               </ul>
             </div>
           </div>
         </div>
         <div class="samsung__accordion__item"
-             style="background-image: url(images/uhd-smart.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-left: 3px solid #fff;  border-right: 3px solid #fff;">
+             style="background-image: url(images/uhd-smart.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; ">
           <div class="accordion__title">
 
             <span class="accordion__title-text">SMART</span>
@@ -830,17 +857,17 @@
           </div>
           <div class="accordion__content" id="uhd__smart">
             <div class="acc_content_item">
-              <p>Design revolucionário que elimina as distrações</p>
+              <p>Começa a tua experiência inteligente 4K </p>
               <ul>
-                <li>Ecrã e Design Infinito</li>
-                <li>Suporte de Parede Slim Fit</li>
-                <li>Slim One Connect Integrável</li>
+                <li>Samsung TV Plus</li>
+                <li> Comando Eco</li>
+                <li>SmartThings</li>
               </ul>
             </div>
           </div>
         </div>
         <div class="samsung__accordion__item"
-             style="background-image: url(images/uhd-experiencia.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-left: 3px solid #fff;  border-right: 3px solid #fff;">
+             style="background-image: url(images/uhd-experiencia.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;">
           <div class="accordion__title">
 
             <span class="accordion__title-text">EXPERIÊNCIA</span>
@@ -848,17 +875,19 @@
           </div>
           <div class="accordion__content" id="uhd__experiencia">
             <div class="acc_content_item">
-              <p>Inovações Sonoras Redefinidas</p>
+              <p>Aproveita o máximo da TV no conforto da tua casa </p>
               <ul>
-                <li>Object Tracking Sound Pro</li>
-                <li>Som SpaceFit</li>
-                <li>Q-Symphony</li>
+                <li>PC na TV</li>
+                <li> Chamadas de Video com Google Duo</li>
+                <li> Multi View/Tap View</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- ==========================   CLOSE  This code for Mobile version UHD Section  ==========================   -->
 
     <!-- -----------------   Footer category sectio Open ------------------------------  -->
     <section class="samsung__disply__cat">
@@ -924,8 +953,13 @@
     </section>
     <!-- -----------------   Footer category sectio Close  ------------------------------  -->
   </section>
+
+
+
   <!-- this section for TV's Lifestyle -->
   <section class="samsung__list__tvlifestyle br-section">
+
+    <!-- ==========================   OPEN  This code for DESKTOP version Tv Lifestyle Section  ==========================   -->
     <div class="samsung__container">
       <div class="samsung__mob_info">
         <a href="https://www.worten.pt/tv-video-e-som/tvs/melhores-tvs-ultima-geracao-e-tecnologia/samsung/produtos?Serie-de-fabricante=LS03A&Serie-de-fabricante=LS05T">
@@ -996,10 +1030,13 @@
         </ul>
       </div>
     </div>
+    <!-- ==========================   CLOSE  This code for DESKTOP version Tv Lifestyle Section  ==========================   -->
+
+    <!-- ==========================   OPEN  This code for Mobile version Tv Lifestyle Section  ==========================   -->
     <div class="samsung__acc_wrapper">
       <div class="samsung__accordion">
         <div class="samsung__accordion__item"
-             style="background-image: url(images/tv-theframe.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-right: 3px solid #fff;">
+             style="background-image: url(images/tv-theframe.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; ">
           <div class="accordion__title">
 
             <span class="accordion__title-text">THE FRAME</span>
@@ -1007,17 +1044,17 @@
           </div>
           <div class="accordion__content" id="lifestyle__frame">
             <div class="acc_content_item">
-              <p> Detalhes nunca antes vistos e um contraste arrojado</p>
+              <p>Cria a tua própria TV</p>
               <ul>
-                <li>Tecnologia Quantum Matrix Pro</li>
-                <li>Processador Neo Quantum 8K</li>
-                <li>Ecrã Anti-Reflexo</li>
+                <li>Modo Arte e Art Store</li>
+                <li>Moldura Personalizável com design moderno</li>
+                <li> Suporte No Gap e Ligações Minimalistas</li>
               </ul>
             </div>
           </div>
         </div>
         <div class="samsung__accordion__item"
-             style="background-image: url(images/tv-sero.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-left: 3px solid #fff;  border-right: 3px solid #fff;">
+             style="background-image: url(images/tv-sero.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; ">
           <div class="accordion__title">
 
             <span class="accordion__title-text">THE SERO</span>
@@ -1025,17 +1062,19 @@
           </div>
           <div class="accordion__content" id="lifestyle__sero">
             <div class="acc_content_item">
-              <p>Design revolucionário que elimina as distrações</p>
+              <p>Entretenimento móvel, melhor na TV</p>
               <ul>
-                <li>Ecrã e Design Infinito</li>
-                <li>Suporte de Parede Slim Fit</li>
-                <li>Slim One Connect Integrável</li>
+                <li> Ecrã rotativo em 100% Volume de Cor</li>
+                <li> Som Poderoso</li>
+                <li>Tap View</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- ==========================   CLOSE  This code for Mobile version Tv Lifestyle Section  ==========================   -->
 
     <!-- -----------------   Footer category sectio Open ------------------------------  -->
     <section class="samsung__disply__cat">
@@ -1072,6 +1111,8 @@
   </section>
 </div>
 <!-- -------------- List Items display section Close  ----------------  -->
+
+
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
