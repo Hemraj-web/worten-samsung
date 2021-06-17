@@ -11,8 +11,12 @@ $(document).ready(function () {
   var section_newqled = $('.samsung__list__newled .vertical_accordion li');
 
   function toggleAccordion_newqled() {
+    if ($(this).hasClass("active")) {
+      $('#neoqled__id').click();
+    }
     section_newqled.removeClass('active');
     $(this).addClass('active');
+
   }
 
   section_newqled.on('click', toggleAccordion_newqled);
@@ -20,6 +24,9 @@ $(document).ready(function () {
   var section_qled = $('.samsung__list__qled .vertical_accordion li');
 
   function toggleAccordion_qled() {
+    if ($(this).hasClass("active")) {
+      $('#qled__id').click();
+    }
     section_qled.removeClass('active');
     $(this).addClass('active');
   }
@@ -29,6 +36,9 @@ $(document).ready(function () {
   var section_uhd = $('.samsung__list__uhd .vertical_accordion li');
 
   function toggleAccordion_uhd() {
+    if ($(this).hasClass("active")) {
+      $('#uhd__id').click();
+    }
     section_uhd.removeClass('active');
     $(this).addClass('active');
   }
@@ -38,6 +48,9 @@ $(document).ready(function () {
   var section_lifestyle = $('.samsung__list__tvlifestyle .vertical_accordion li');
 
   function toggleAccordion_lifestyle() {
+    if ($(this).hasClass("active")) {
+      $('#lifestyle__id').click();
+    }
     section_lifestyle.removeClass('active');
     $(this).addClass('active');
   }
