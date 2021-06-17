@@ -73,7 +73,7 @@
 }
 
 .samsung__top__cat > ul > li.active {
-    border-bottom: 30px solid #000;
+    border-bottom: 16px solid #000;
 }
 
 .samsung__top__cat > ul > li.active p {
@@ -429,6 +429,21 @@
 .samsung__mob_info h3{
     margin-bottom:10px;
 }
+
+
+.samsung__mob_info a {
+    text-decoration: none;
+}
+.samsung__mob_info a h3{
+    color: #fff;
+    transition: all .5s;
+}
+.samsung__mob_info a h3:hover{
+    color: #e41a15;
+}
+.samsung__mob_info a p{
+    color: #fff;
+}
 @media screen and (max-width: 575.98px) {
     .vertical_accordion {
         flex-direction: column;
@@ -533,6 +548,9 @@
         border-bottom: 2px solid #fff;
     }
 
+    li#samsung_lifestyle_sero,
+    li#samsung_uhd_experience,
+    li#samsung_uhd_smart,
     li#samsung_qled_gaming,
     li#samsung_qled_som,
     li#samsung_newled_som,
