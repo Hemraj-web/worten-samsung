@@ -64,6 +64,8 @@ $(document).ready(function () {
   var samsung_display_list = $('.samsung__display__list li');
 
   function toggleSamsungDisplay() {
+
+
     samsung_display_list.removeClass('active');
     $(this).addClass('active');
     var sec_id = $(this).data('sec');
@@ -75,6 +77,7 @@ $(document).ready(function () {
     $("#" + sec_id).addClass('active');
     $("#" + sec_id).siblings('li').removeClass('active');
     $(this).parent().parent().find('.samsung__display__list_acc').addClass('active');
+    $(".samsung__accordion").removeClass('active');
     $("#" + acc_sec_id).parent().parent().parent().find('.samsung__accordion').addClass('active');
     $(this).parent().parent().find(".samsung__display__list").hide();
   }
@@ -100,6 +103,10 @@ $(document).ready(function () {
       $this.next().slideToggle();
     });
     //END
+
+
+
+
 
   });
 
