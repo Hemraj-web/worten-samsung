@@ -77,10 +77,10 @@ $(document).ready(function () {
 
   /************* On click for Mobile to open accordion list *************/
   var brdisplay = false;
-  var samsung_display_list = $('.samsung__display__list li .sumsung__display_heading');
+  var samsung_display_list = $('.samsung__display__list li');
 
   function toggleSamsungDisplay() {
-    var $this = $(this).parent();
+    var $this = $(this);
     samsung_display_list.removeClass('active');
     $this.addClass('active');
     var sec_id = $this.data('sec');
