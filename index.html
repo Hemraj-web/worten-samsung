@@ -9,41 +9,599 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
           integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <style>
 
-</head>
-<body>
-<style>
+    /*  ============ global css for  all section Open*/
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .samsung__container {
+      width: 100%;
+      max-width: 1300px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    /*  ============ global css for  all section Close*/
+
+    /*  ============ Top banner slider  section Open*/
+
+    .samsung__image__wrap {
+      background-image: url("images/samsung-banner-top.jpg");
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 400px;
+      width: 100%;
+      position: relative;
+    }
+
+    .samsung__image__wrap .samsung__logo img {
+      width: 100%;
+      max-width: 265px;
+      height: auto;
+      padding-left: 10%;
+      padding-top: 10%;
+    }
+
+    .samsung__image__wrap .samsung__text {
+      color: #fff;
+      padding-left: 10%;
+      padding-top: 5%;
+    }
+
+    /*  ============ Top banner slider  section Close*/
+
+    /*  ============  main body  section open  */
+
+    .samsung__body__part {
+      margin-top: 30px;
+    }
+
+    .samsung__top__cat ul {
+      display: flex;
+      column-gap: 15px;
+      position: relative;
+      align-items: baseline
+    }
+
+    .samsung__top__cat > ul > li.active {
+      border-bottom: 16px solid #000;
+    }
+
+    .samsung__top__cat > ul > li.active p {
+      border-bottom-left-radius: unset;
+      border-bottom-right-radius: unset;
+
+    }
+
+    .samsung__top__cat > ul > li {
+      list-style: none;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .samsung__lists .samsung__list__item img {
+      max-width: 100%;
+      border-top-left-radius: 10px;
+      -webkit-border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      -webkit-border-top-right-radius: 10px;
+    }
+
+    .samsung__lists .samsung__list__item p {
+      background-color: #000;
+      color: #fff;
+      position: absolute;
+      bottom: 0;
+      padding: 10px;
+      width: 100%;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      text-transform: uppercase;
+    }
+
+    /*  ============ main body  section Close */
+    /*  ============  List Items display section Open  */
+
+    /* neo qled */
+    @-webkit-keyframes anim {
+      0% {
+        display: none;
+        /*opacity: 0;*/
+        transform: translateY(-40%);
+      }
+      1% {
+        display: block;
+        /*opacity: 0;*/
+        /*transform: scale(0);*/
+        transform: translateY(-40%);
+      }
+      100% {
+        /*opacity: 1;*/
+        /*transform: scale(1);*/
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes anim {
+      0% {
+        display: none;
+        /*opacity: 0;*/
+        transform: translateY(-40%);
+      }
+      1% {
+        display: block;
+        /*opacity: 0;*/
+        /*transform: scale(0);*/
+        transform: translateY(-40%);
+      }
+      100% {
+        /*opacity: 1;*/
+        /*transform: scale(1);*/
+        transform: translateY(0);
+      }
+    }
+
+    .samsung__list__newled {
+      display: none;
+      opacity: 0;
+      transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+    }
+
+    .samsung__list__newled.active {
+      display: block;
+      opacity: 1;
+      -webkit-animation: anim 0.7s ease-in-out;
+      animation: anim 0.7s ease-in-out;
+    }
+
+    .samsung__list__newled .samsung__display__list {
+      background-image: url("images/qled-8l-display.jpg");
+      min-height: 555px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: space-around;
+    }
+
+
+    /* neo gled inside design css open  */
+    .vertical_accordion li.active .section-title {
+      transform: unset;
+    }
+
+    .vertical_accordion li.active {
+      display: block;
+    }
+
+    .vertical_accordion .section-title {
+      display: flex;
+      justify-content: center;
+    }
+
+    .vertical_accordion li.active h2 {
+      color: #fff !important;
+      font-size: 1rem;
+      font-weight: normal;
+    }
+
+    .vertical_accordion li.active .section-content {
+      margin-top: 55px !important;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff !important;
+      width: 85%;
+      border-radius: 15px;
+      padding: 20px;
+    }
+
+    .vertical_accordion li.active .section-content p {
+      padding-bottom: 10px;
+    }
+
+    .vertical_accordion li.active .section-content p {
+      padding-left: 5%;
+    }
+
+    .vertical_accordion li.active .section-content ul {
+      padding-left: 8%;
+    }
+
+    /* neo gled inside design css close  */
+
+    /* qled qled */
+    .samsung__list__qled {
+      display: none;
+      opacity: 0;
+      transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+    }
+
+    .samsung__list__qled.active {
+      display: block;
+      opacity: 1;
+      -webkit-animation: anim 0.7s ease-in-out;
+      animation: anim 0.7s ease-in-out;
+    }
+
+    .samsung__list__qled .samsung__display__list {
+      background-image: url("images/qled-display.jpg");
+      min-height: 555px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: space-around;
+    }
+
+
+    /* uhd */
+    .samsung__list__uhd {
+      display: none;
+      opacity: 0;
+      transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+    }
+
+    .samsung__list__uhd.active {
+      display: block;
+      opacity: 1;
+      -webkit-animation: anim 0.7s ease-in-out;
+      animation: anim 0.7s ease-in-out;
+    }
+
+    .samsung__list__uhd .samsung__display__list {
+      background-image: url("images/uhd-display.jpg");
+      min-height: 555px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: space-around;
+      visibility: visible;
+      opacity: 1;
+
+    }
+
+    /* samsung__display__list_acc */
+    .samsung__display__list_acc {
+      display: none;
+      opacity: 0;
+      transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+    }
+
+    .samsung__display__list_acc.active {
+      display: block;
+      opacity: 1;
+      -webkit-animation: anim 0.7s ease-in-out;
+      animation: anim 0.7s ease-in-out;
+    }
+
+    /* Tv's lifestyle */
+    .samsung__list__tvlifestyle {
+      display: none;
+      opacity: 0;
+      transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+    }
+
+    .samsung__list__tvlifestyle.active {
+      display: block;
+      opacity: 1;
+      -webkit-animation: anim 0.7s ease-in-out;
+      animation: anim 0.7s ease-in-out;
+    }
+
+    .samsung__list__tvlifestyle .samsung__display__list {
+      background-image: url("images/tv-lifestyle-display.jpg");
+      min-height: 555px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: space-around;
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .samsung__display__list img {
+      background-size: cover;
+      background-position: center;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .samsung__display__list li {
+      color: #fff;
+      list-style: none;
+      width: 100%;
+      border-right: 2px solid #fff;
+    }
+
+    .sumsung__display_heading {
+      display: flex;
+      justify-content: space-between;
+      padding: 26px;
+      cursor: pointer;
+    }
+
+    .samsung__display__list .samsung__info {
+      padding: 26px;
+
+    }
+
+    .samsung__display__list .samsung__info p {
+      padding-top: 15px;
+    }
+
+
+    /*  ============  List Items display section Close  */
+
+
+    /*  ============ Footer category sectio Open */
+    .samsung__disply__cat {
+      background-color: #000000;
+      padding-top: 15px;
+      padding-bottom: 25px;
+    }
+
+    .samsung__disply__cat .Samsung__cat__items {
+      display: flex;
+      justify-content: center;
+
+
+    }
+
+
+    .samsung__disply__cat .Samsung__cat__items .samsung__cat__item img {
+      width: 100%;
+      height: auto;
+
+    }
+
+    .samsung__cat__image {
+      position: relative;
+      width: 100%;
+      max-width: 85%;
+      margin: 0 auto;
+    }
+
+    .samsung__overlay__logo img {
+      width: 100%;
+      height: auto;
+      max-width: 100px;
+
+    }
+
+    .samsung__overlay__logo {
+      position: absolute;
+      top: 15%;
+      left: 10%;
+    }
+
+    .samsung__disply__cat .Samsung__cat__items .samsung__cat__item ul li {
+      list-style: none;
+      padding-right: 20px;
+      display: inline-block;
+      color: #fff;
+
+    }
+
+    .samsung__disply__cat .Samsung__cat__items .samsung__cat__item ul {
+      display: table;
+      margin: 0 auto;
+      padding-top: 10px;
+    }
+
+    .samsung__disply__cat .Samsung__cat__items .samsung__cat__item p {
+      text-align: center;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+
+    .samsung__cat__btn {
+      text-align: center;
+      padding-top: 10px;
+    }
+
+    .samsung__cat__item .samsung__btn {
+      background-color: #e41a15;
+      padding: 10px 15px;
+      display: inline-block;
+      border-bottom: 4px solid #a61410;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.5s ease 0s;
+
+    }
+
+    .samsung__cat__item .samsung__btn:hover {
+      background: #a61410;
+    }
+
+    .samsung__disply__cat .Samsung__cat__items .samsung__cat__item ul li:last-child {
+      padding-right: unset;
+    }
+    .samsung__mob_info{
+      display:none;
+      background: #000;
+      color: #fff;
+      padding: 19px;
+    }
+    .samsung__mob_info h3{
+      margin-bottom:10px;
+    }
+
+
+    .samsung__mob_info a {
+      text-decoration: none;
+    }
+    .samsung__mob_info a h3{
+      color: #fff;
+      transition: all .5s;
+    }
+    .samsung__mob_info a h3:hover{
+      color: #e41a15;
+    }
+    .samsung__mob_info a p{
+      color: #fff;
+    }
+    @media screen and (max-width: 575.98px) {
+      .vertical_accordion {
+        flex-direction: column;
+      }
+
+      .vertical_accordion li .section-title h2 {
+        transform: rotate(0) !important;
+      }
+
+      .vertical_accordion li {
+        flex-direction: column;
+      }
+
+      .vertical_accordion li .section-title {
+        transform: rotate(0) !important;
+      }
+
+      /*    this css for main top toggle image */
+      .samsung__list__qled .samsung__display__list,
+      .samsung__list__uhd .samsung__display__list,
+      .samsung__list__tvlifestyle .samsung__display__list,
+      .samsung__list__newled .samsung__display__list {
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+
+      .samsung__mob_info{
+        display:block;
+      }
+
+      .samsung__display__list li {
+        border-bottom: 2px solid #fff;
+        border-right: none;
+      }
+
+      .samsung__display__list li:last-child {
+        border-bottom: none;
+      }
+
+      .vertical_accordion li.active .section-content {
+        width: 100%;
+      }
+
+      .vertical_accordion li.active .section-content {
+        margin-top: 8px !important;
+      }
+
+      .vertical_accordion li.active .section-content {
+        padding: 12px;
+      }
+
+      .samsung__overlay__logo {
+        display: none;
+      }
+
+      .samsung__cat__item .samsung__btn {
+        padding: 5px 9px;
+        font-size: 14px;
+      }
+
+      .samsung__info {
+        display: none;
+      }
+
+      .samsung__disply__cat .Samsung__cat__items .samsung__cat__item ul {
+        font-size: 10px;
+      }
+
+      .samsung__disply__cat .Samsung__cat__items .samsung__cat__item ul li {
+        padding-right: 3px;
+      }
+
+      .vertical_accordion li.active {
+        flex: 45;
+      }
+      .samsung__image__wrap .samsung__text {
+        position: absolute;
+        bottom: 30%;
+      }
+
+      .vertical_accordion li .section-title h2 {
+        font-size: 15px;
+        font-weight: normal;
+      }
+      .samsung__list__qled .samsung__display__list,
+      .samsung__list__uhd .samsung__display__list,
+      .samsung__list__tvlifestyle .samsung__display__list,
+      .samsung__list__newled .samsung__display__list {
+        min-height: 215px;
+      }
+      li#samsung_lifestyle_frame.active,
+      li#samsung_uhd_imagem.active,
+      li#samsung_qled_imagem.active,
+      li#samsung_newled_imagem.active{
+        border-right: 0 !important;
+      }
+      li#samsung_lifestyle_frame,
+      li#samsung_uhd_imagem,
+      li#samsung_qled_imagem,
+      li#samsung_newled_imagem{
+        border-right: 0 !important;
+        border-bottom: 2px solid #fff;
+      }
+
+      li#samsung_lifestyle_sero,
+      li#samsung_uhd_experience,
+      li#samsung_uhd_smart,
+      li#samsung_qled_gaming,
+      li#samsung_qled_som,
+      li#samsung_newled_som,
+      li#samsung_newled_design{
+        border-right: 0 !important;
+        border-left: 0 !important;
+        border-bottom: 2px solid #fff;
+      }
+
+
+      li#samsung_newled_design.active{
+        border-right: 0 !important;
+        border-left: 0 !important;
+      }
+    }
+
+
+    /*  ============ Footer category sectio Close */
+
+
     .swiper-slide:last-child {
-        margin-right: calc(100% - (100% / 3));
+      margin-right: calc(100% - (100% / 3));
     }
 
     .samsung__display__list_acc {
-        display: none;
+      display: none;
     }
 
     ul.vertical_accordion {
-        display: flex;
-        min-height: 500px;
-        max-height: 500px;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        list-style-type: none;
+      display: flex;
+      min-height: 500px;
+      max-height: 500px;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      list-style-type: none;
 
     }
 
     .vertical_accordion > li {
-        flex: 1;
-        display: flex;
-        align-items: stretch;
-        padding: 20px;
-        background: #000000;
-        cursor: pointer;
-        transition: all 0.5s ease;
+      flex: 1;
+      display: flex;
+      align-items: stretch;
+      padding: 20px;
+      background: #000000;
+      cursor: pointer;
+      transition: all 0.5s ease;
     }
 
     /*.vertical_accordion li:hover {*/
@@ -51,182 +609,181 @@
     /*}*/
 
     .vertical_accordion li.active {
-        flex: 5;
-        background: #fff;
-        cursor: default;
+      flex: 5;
+      background: #fff;
+      cursor: default;
     }
 
     .vertical_accordion li.active h2 {
-        color: #000000;
+      color: #000000;
     }
 
     .vertical_accordion li.active .section-content {
-        flex: 4;
-        /*opacity: 1;*/
-        display: block;
-        transform: scaleX(1);
-        color: #000000;
+      flex: 4;
+      /*opacity: 1;*/
+      display: block;
+      transform: scaleX(1);
+      color: #000000;
     }
 
     .vertical_accordion li .section-title {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        color: white;
-        transform: rotate(90deg);
-        justify-content: space-between;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: white;
+      transform: rotate(90deg);
+      justify-content: space-between;
     }
 
     .vertical_accordion li .section-title h2 {
-        margin: 0;
-        white-space: nowrap;
-        padding-right: 14px;
+      margin: 0;
+      white-space: nowrap;
+      padding-right: 14px;
     }
 
     .vertical_accordion li .section-content {
-        flex: 1;
-        /*display: flex;*/
-        align-items: center;
-        margin: 0;
-        padding: 0;
-        /*opacity: 0;*/
-        display: none;
-        transition: all 0.25s 0.1s ease-out;
+      flex: 1;
+      /*display: flex;*/
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      /*opacity: 0;*/
+      display: none;
+      transition: all 0.25s 0.1s ease-out;
     }
 
     .vertical_accordion li.active .section-title .fa-plus::before {
-        content: "\f068";
+      content: "\f068";
     }
 
     .accordion-active .fa-plus::before {
-        content: "\f068";
+      content: "\f068";
     }
 
 
     /*-------------------------------------*/
 
     .samsung__accordion__item {
-        margin: 5px auto;
-        color: #fff;
+      margin: 2px auto;
+      color: #fff;
     }
 
     .samsung__accordion__item .accordion__title {
-        position: relative;
-        display: block;
-        padding: 13px 60px 15px 13px;
-        margin-bottom: 2px;
-        color: #fff;
-        font-size: 28px;
-        text-decoration: none;
-        /*background-color: #eaeaea;*/
-        border-radius: 3px;
-        -webkit-transition: background-color 0.2s;
-        transition: background-color 0.2s;
-        cursor: pointer;
+      position: relative;
+      display: block;
+      padding: 13px 60px 15px 13px;
+      margin-bottom: 2px;
+      color: #fff;
+      font-size: 28px;
+      text-decoration: none;
+      /*background-color: #eaeaea;*/
+      border-radius: 3px;
+      -webkit-transition: background-color 0.2s;
+      transition: background-color 0.2s;
+      cursor: pointer;
     }
 
     .samsung__accordion__item .accordion__title:hover {
-        /*background-color: #e5e4e4;*/
-        transition: all 0.5s ease-out;
+      /*background-color: #e5e4e4;*/
+      transition: all 0.5s ease-out;
     }
 
     .samsung__accordion__item .accordion-active {
-        /*background-color: #e5e4e4;*/
+      /*background-color: #e5e4e4;*/
     }
 
     .samsung__accordion__item .accordion__title .accordion__arrow {
-        position: absolute;
-        top: 13px;
-        right: 10px;
-        display: inline-block;
-        vertical-align: middle;
-        width: 30px;
-        height: 30px;
-        text-align: center;
-        color: #fff;
-        line-height: 30px;
-        font-size: 20px;
-        font-weight: 700;
-        margin-right: 5px;
-        border-radius: 50%;
-        -webkit-transition: all 0.2s ease-out;
-        transition: all 0.2s ease-out;
+      position: absolute;
+      top: 13px;
+      right: 10px;
+      display: inline-block;
+      vertical-align: middle;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      color: #fff;
+      line-height: 30px;
+      font-size: 20px;
+      font-weight: 700;
+      margin-right: 5px;
+      border-radius: 50%;
+      -webkit-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
     }
 
     .samsung__accordion__item .accordion__rotate {
-        transform: rotate(225deg);
+      transform: rotate(225deg);
     }
 
     .samsung__accordion__item .accordion__content {
-        padding: 0 30px 30px 30px;
-        margin-bottom: 2px;
-        font-size: 14px;
-        display: none;
-        /*background-color: #f3f3f3;*/
+      padding: 0 30px 30px 30px;
+      margin-bottom: 2px;
+      font-size: 14px;
+      display: none;
+      /*background-color: #f3f3f3;*/
     }
 
     .samsung__accordion__item .accordion__arrow-item {
-        font-weight: 700;
+      font-weight: 700;
     }
 
     .samsung__accordion {
-        display: none;
-        opacity: 0;
-        transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+      display: none;
+      opacity: 0;
+      transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
     }
 
     .samsung__accordion.active {
-        display: block;
-        opacity: 1;
-        -webkit-animation: anim 0.7s ease-in-out;
-        animation: anim 0.7s ease-in-out;
+      display: block;
+      opacity: 1;
+      -webkit-animation: anim 0.7s ease-in-out;
+      animation: anim 0.7s ease-in-out;
     }
 
     .samsung__acc_wrapper {
-        display: none;
+      display: none;
     }
 
     .accordion__title-text {
-        font-size: 16px;
+      font-size: 16px;
     }
 
     .accordion__title .fas {
-        font-size: 16px;
-        float: right;
-        margin-top: 12px;
+      font-size: 16px;
+      float: right;
+      margin-top: 12px;
     }
 
     .acc_content_item ul {
-        padding-left: 8%;
+      padding-left: 8%;
     }
 
     .acc_content_item {
-        background: rgba(0, 0, 0, 0.5);
-        color: #fff !important;
-        border-radius: 15px;
-        padding: 20px;
-    }
-
-    .samsung__display__list li:hover {
-        cursor: pointer;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff !important;
+      border-radius: 15px;
+      padding: 20px;
     }
 
     @media screen and (max-width: 575.98px) {
-        .samsung__acc_wrapper {
-            display: block;
-        }
+      .samsung__acc_wrapper {
+        display: block;
+      }
 
-        .samsung__display__list_acc, .samsung__display__list_acc.active {
-            display: none;
-        }
+      .samsung__display__list_acc, .samsung__display__list_acc.active {
+        display: none;
+      }
     }
 
     /*-------------------------------------*/
-</style>
+  </style>
+</head>
+<body>
+
 
 
 <!-- -------------- TOp slider section Open  ----------------  -->
@@ -279,6 +836,9 @@
 <div class="samsung__content__wrapper" style="overflow: hidden">
   <!-- this section for neo qled-->
   <section class="samsung__list__newled br-section active">
+
+
+    <!-- ==========================   OPEN This code for Desktop version Neo LED Section  ==========================   -->
     <div class="samsung__container">
       <div class="samsung__mob_info">
         <a href="https://www.worten.pt/tv-video-e-som/tvs/melhores-tvs-ultima-geracao-e-tecnologia/samsung/produtos?Serie-de-fabricante=QN800A&Serie-de-fabricante=QN85A&Serie-de-fabricante=QN900A&Serie-de-fabricante=QN95A">
@@ -364,149 +924,158 @@
 
         </ul>
       </div>
-
     </div>
-    <div class="samsung__acc_wrapper">
-      <div class="samsung__accordion">
-        <div class="samsung__accordion__item"
-             style="background-image: url(images/neoqled-imagem.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-right: 3px solid #fff;">
-          <div class="accordion__title">
+      <!-- ==========================   CLOSE  This code for Desktop version Neo LED Section  ==========================   -->
 
-            <span class="accordion__title-text">IMAGEM</span>
-            <i class="fas fa-plus"></i>
-          </div>
-          <div class="accordion__content" id="neoqled__imagem">
-            <div class="acc_content_item">
-              <p> Detalhes nunca antes vistos e um contraste arrojado</p>
-              <ul>
-                <li>Tecnologia Quantum Matrix Pro</li>
-                <li>Processador Neo Quantum 8K</li>
-                <li>Ecrã Anti-Reflexo</li>
-              </ul>
+
+
+      <!-- ==========================   OPEN  This code for Mobile version Neo LED Section  ==========================   -->
+      <div class="samsung__acc_wrapper">
+        <div class="samsung__accordion">
+          <div class="samsung__accordion__item"
+               style="background-image: url(images/neoqled-imagem.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; ">
+            <div class="accordion__title">
+
+              <span class="accordion__title-text">IMAGEM</span>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="accordion__content" id="neoqled__imagem">
+              <div class="acc_content_item">
+                <p> Detalhes nunca antes vistos e um contraste arrojado</p>
+                <ul>
+                  <li>Tecnologia Quantum Matrix Pro</li>
+                  <li>Processador Neo Quantum 8K</li>
+                  <li>Ecrã Anti-Reflexo</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="samsung__accordion__item"
-             style="background-image: url(images/neoqled-design.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; border-left: 3px solid #fff; border-right: 3px solid #fff;">
-          <div class="accordion__title">
+          <div class="samsung__accordion__item"
+               style="background-image: url(images/neoqled-design.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;">
+            <div class="accordion__title">
 
-            <span class="accordion__title-text">DESIGN</span>
-            <i class="fas fa-plus"></i>
-          </div>
-          <div class="accordion__content" id="neoqled__design">
-            <div class="acc_content_item">
-              <p>Design revolucionário que elimina as distrações</p>
-              <ul>
-                <li>Ecrã e Design Infinito</li>
-                <li>Suporte de Parede Slim Fit</li>
-                <li>Slim One Connect Integrável</li>
-              </ul>
+              <span class="accordion__title-text">DESIGN</span>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="accordion__content" id="neoqled__design">
+              <div class="acc_content_item">
+                <p>Design revolucionário que elimina as distrações</p>
+                <ul>
+                  <li>Ecrã e Design Infinito</li>
+                  <li>Suporte de Parede Slim Fit</li>
+                  <li>Slim One Connect Integrável</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="samsung__accordion__item"
-             style="background-image: url(images/neoqled-som.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; border-left: 3px solid #fff; border-right: 3px solid #fff;">
-          <div class="accordion__title">
+          <div class="samsung__accordion__item"
+               style="background-image: url(images/neoqled-som.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; ">
+            <div class="accordion__title">
 
-            <span class="accordion__title-text">SOM</span>
-            <i class="fas fa-plus"></i>
-          </div>
-          <div class="accordion__content" id="neoqled__som">
-            <div class="acc_content_item">
-              <p>Inovações Sonoras Redefinidas</p>
-              <ul>
-                <li>Object Tracking Sound Pro</li>
-                <li>Som SpaceFit</li>
-                <li>Q-Symphony</li>
-              </ul>
+              <span class="accordion__title-text">SOM</span>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="accordion__content" id="neoqled__som">
+              <div class="acc_content_item">
+                <p>Inovações Sonoras Redefinidas</p>
+                <ul>
+                  <li>Object Tracking Sound Pro</li>
+                  <li>Som SpaceFit</li>
+                  <li>Q-Symphony</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <!-- ==========================   CLOSE  This code for Mobile version Neo LED Section  ==========================   -->
 
-    <section class="samsung__note__text" style="color: #efefef; background: #000; padding:25px 0; padding-left: 7%;">
-      <div class="samsung__container">
-        <p>*Algumas características não estão disponíveis em todos os modelos</p>
-      </div>
 
-    </section>
-    <!-- -----------------   Footer category sectio Open ------------------------------  -->
-    <section class="samsung__disply__cat">
-      <div class="samsung__container swipper_new">
-        <div class="Samsung__cat__items swiper-wrapper">
-          <div class="samsung__cat__item swiper-slide">
-            <div class="samsung__cat__image">
-              <img src="images/qn9001-neo.png" alt="">
+      <section class="samsung__note__text" style="color: #efefef; background: #000; padding:25px 0; padding-left: 7%;">
+        <div class="samsung__container">
+          <p>*Algumas características não estão disponíveis em todos os modelos</p>
+        </div>
+
+      </section>
+      <!-- -----------------   Footer category sectio Open ------------------------------  -->
+      <section class="samsung__disply__cat">
+        <div class="samsung__container swipper_new">
+          <div class="Samsung__cat__items swiper-wrapper">
+            <div class="samsung__cat__item swiper-slide">
+              <div class="samsung__cat__image">
+                <img src="images/qn9001-neo.png" alt="">
+              </div>
+              <p>QN900A</p>
+              <ul>
+                <li>85"</li>
+                <li>75"</li>
+                <li>65"</li>
+              </ul>
+              <div class="samsung__cat__btn">
+                <a href="https://www.worten.pt/tv-video-e-som/tvs/melhores-tvs-ultima-geracao-e-tecnologia/samsung/produtos?Serie-de-fabricante=QN900A"
+                   class="samsung__btn">ver artigos</a>
+              </div>
             </div>
-            <p>QN900A</p>
-            <ul>
-              <li>85"</li>
-              <li>75"</li>
-              <li>65"</li>
-            </ul>
-            <div class="samsung__cat__btn">
-              <a href="https://www.worten.pt/tv-video-e-som/tvs/melhores-tvs-ultima-geracao-e-tecnologia/samsung/produtos?Serie-de-fabricante=QN900A"
-                 class="samsung__btn">ver artigos</a>
+            <div class="samsung__cat__item swiper-slide">
+              <div class="samsung__cat__image">
+                <img src="images/qn800a-neo.png" alt="">
+              </div>
+              <p>QN800A</p>
+              <ul>
+                <li>85"</li>
+                <li>75"</li>
+                <li>65"</li>
+              </ul>
+              <div class="samsung__cat__btn">
+                <a href="https://www.worten.pt/tv-video-e-som/tvs/melhores-tvs-ultima-geracao-e-tecnologia/samsung/produtos?Serie-de-fabricante=QN800A"
+                   class="samsung__btn">ver artigos</a>
+              </div>
             </div>
-          </div>
-          <div class="samsung__cat__item swiper-slide">
-            <div class="samsung__cat__image">
-              <img src="images/qn800a-neo.png" alt="">
-            </div>
-            <p>QN800A</p>
-            <ul>
-              <li>85"</li>
-              <li>75"</li>
-              <li>65"</li>
-            </ul>
-            <div class="samsung__cat__btn">
-              <a href="https://www.worten.pt/tv-video-e-som/tvs/melhores-tvs-ultima-geracao-e-tecnologia/samsung/produtos?Serie-de-fabricante=QN800A"
-                 class="samsung__btn">ver artigos</a>
-            </div>
-          </div>
-          <div class="samsung__cat__item swiper-slide">
-            <div class="samsung__cat__image">
-              <img src="images/qn95a-neo.png" alt="">
-            </div>
-            <p>QN95A</p>
-            <ul>
-              <li>85"</li>
-              <li>75"</li>
-              <li>65"</li>
-              <li>55"</li>
-            </ul>
-            <div class="samsung__cat__btn">
-              <a href="https://www.worten.pt/tv-video-e-som/tvs/melhores-tvs-ultima-geracao-e-tecnologia/samsung/produtos?Serie-de-fabricante=QN95A
+            <div class="samsung__cat__item swiper-slide">
+              <div class="samsung__cat__image">
+                <img src="images/qn95a-neo.png" alt="">
+              </div>
+              <p>QN95A</p>
+              <ul>
+                <li>85"</li>
+                <li>75"</li>
+                <li>65"</li>
+                <li>55"</li>
+              </ul>
+              <div class="samsung__cat__btn">
+                <a href="https://www.worten.pt/tv-video-e-som/tvs/melhores-tvs-ultima-geracao-e-tecnologia/samsung/produtos?Serie-de-fabricante=QN95A
 " class="samsung__btn">ver artigos</a>
+              </div>
             </div>
-          </div>
-          <div class="samsung__cat__item swiper-slide">
-            <div class="samsung__cat__image">
-              <img src="images/qn85a-neo.png" alt="">
+            <div class="samsung__cat__item swiper-slide">
+              <div class="samsung__cat__image">
+                <img src="images/qn85a-neo.png" alt="">
 
-            </div>
-            <p>QN85A</p>
-            <ul>
-              <li>85"</li>
-              <li>75"</li>
-              <li>65"</li>
-              <li>55"</li>
+              </div>
+              <p>QN85A</p>
+              <ul>
+                <li>85"</li>
+                <li>75"</li>
+                <li>65"</li>
+                <li>55"</li>
 
-            </ul>
-            <div class="samsung__cat__btn">
-              <a href="https://www.worten.pt/tv-video-e-som/tvs/melhores-tvs-ultima-geracao-e-tecnologia/samsung/produtos?Serie-de-fabricante=QN85A"
-                 class="samsung__btn">ver artigos</a>
+              </ul>
+              <div class="samsung__cat__btn">
+                <a href="https://www.worten.pt/tv-video-e-som/tvs/melhores-tvs-ultima-geracao-e-tecnologia/samsung/produtos?Serie-de-fabricante=QN85A"
+                   class="samsung__btn">ver artigos</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- -----------------   Footer category sectio Close  ------------------------------  -->
+      </section>
+      <!-- -----------------   Footer category sectio Close  ------------------------------  -->
+
 
   </section>
+
   <!-- this section for qled -->
   <section class="samsung__list__qled br-section">
+    <!-- ==========================   OPEN  This code for Desktop version QLED Section  ==========================   -->
     <div class="samsung__container">
       <div class="samsung__mob_info">
         <a href="https://www.worten.pt/tv-video-e-som/tvs/melhores-tvs-ultima-geracao-e-tecnologia/samsung/produtos?Serie-de-fabricante=Q60A&Serie-de-fabricante=Q70&Serie-de-fabricante=Q75A&Serie-de-fabricante=Q80A">
@@ -592,10 +1161,13 @@
         </ul>
       </div>
     </div>
+    <!-- ==========================   CLOSE  This code for Desktop version  QLED Section  ==========================   -->
+
+    <!-- ==========================   OPEN  This code for Mobile version QLED Section  ==========================   -->
     <div class="samsung__acc_wrapper">
       <div class="samsung__accordion">
         <div class="samsung__accordion__item"
-             style="background-image: url(images/qled-imagem.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-right: 3px solid #fff;">
+             style="background-image: url(images/qled-imagem.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; ">
           <div class="accordion__title">
 
             <span class="accordion__title-text">IMAGEM</span>
@@ -603,17 +1175,17 @@
           </div>
           <div class="accordion__content" id="qled__imagem">
             <div class="acc_content_item">
-              <p> Detalhes nunca antes vistos e um contraste arrojado</p>
+              <p>Brilho duradouro, cores infinitas </p>
               <ul>
-                <li>Tecnologia Quantum Matrix Pro</li>
-                <li>Processador Neo Quantum 8K</li>
-                <li>Ecrã Anti-Reflexo</li>
+                <li>100% Volume de Cor com Tecnologia Quantum Dot</li>
+                <li> Quantum HDR</li>
+                <li> Ângulo de Visualização Amplo</li>
               </ul>
             </div>
           </div>
         </div>
         <div class="samsung__accordion__item"
-             style="background-image: url(images/qled-som.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-left: 3px solid #fff;  border-right: 3px solid #fff;">
+             style="background-image: url(images/qled-som.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; ">
           <div class="accordion__title">
 
             <span class="accordion__title-text">SOM</span>
@@ -621,17 +1193,17 @@
           </div>
           <div class="accordion__content" id="qled__som">
             <div class="acc_content_item">
-              <p>Design revolucionário que elimina as distrações</p>
+              <p>Experiência de Som perfeitamente orquestrada </p>
               <ul>
-                <li>Ecrã e Design Infinito</li>
-                <li>Suporte de Parede Slim Fit</li>
-                <li>Slim One Connect Integrável</li>
+                <li>Som Adaptativo</li>
+                <li>Active Voice Amplifier (AVA)</li>
+                <li>Q-Symphony</li>
               </ul>
             </div>
           </div>
         </div>
         <div class="samsung__accordion__item"
-             style="background-image: url(images/qled-gamming.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-left: 3px solid #fff;  border-right: 3px solid #fff;">
+             style="background-image: url(images/qled-gamming.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  ">
           <div class="accordion__title">
 
             <span class="accordion__title-text">GAMMING</span>
@@ -639,17 +1211,19 @@
           </div>
           <div class="accordion__content" id="qled__gamming">
             <div class="acc_content_item">
-              <p>Inovações Sonoras Redefinidas</p>
+              <p>A TV que muda as regras do jogo</p>
               <ul>
-                <li>Object Tracking Sound Pro</li>
-                <li>Som SpaceFit</li>
-                <li>Q-Symphony</li>
+                <li> Visualização de Jogo Ultra Ampla & Barra de Jogo</li>
+                <li> Motion Xcelerator Turbo</li>
+                <li> Auto Low Latency Mode</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- ==========================   CLOSE  This code for Mobile version QLED Section  ==========================   -->
 
 
     <section class="samsung__note__text" style="color: #efefef; background: #000; padding:25px 0; padding-left: 7%;">
@@ -722,8 +1296,11 @@
     <!-- -----------------   Footer category sectio Close  ------------------------------  -->
   </section>
 
+
+
   <!-- this section for UHD -->
   <section class="samsung__list__uhd br-section">
+    <!-- ==========================   OPEN  This code for DESKTOP version UHD Section  ==========================   -->
     <div class="samsung__container">
       <div class="samsung__mob_info">
         <a href="https://www.worten.pt/tv-video-e-som/tvs/melhores-tvs-ultima-geracao-e-tecnologia/samsung/produtos?Serie-de-fabricante=AU7175&Serie-de-fabricante=AU9005&Serie-de-fabricante=TU7025">
@@ -809,11 +1386,13 @@
         </ul>
       </div>
     </div>
+    <!-- ==========================   CLOSE  This code for DESKTOP version UHD  Section  ==========================   -->
 
+    <!-- ==========================   OPEN  This code for Mobile version UHD Section  ==========================   -->
     <div class="samsung__acc_wrapper">
       <div class="samsung__accordion">
         <div class="samsung__accordion__item"
-             style="background-image: url(images/uhd-imagem.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;   border-right: 3px solid #fff;">
+             style="background-image: url(images/uhd-imagem.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;">
           <div class="accordion__title">
 
             <span class="accordion__title-text">IMAGEM</span>
@@ -821,17 +1400,17 @@
           </div>
           <div class="accordion__content" id="uhd__imagem">
             <div class="acc_content_item">
-              <p> Detalhes nunca antes vistos e um contraste arrojado</p>
+              <p>Cor crystal vibrante num perfil fino</p>
               <ul>
-                <li>Tecnologia Quantum Matrix Pro</li>
-                <li>Processador Neo Quantum 8K</li>
-                <li>Ecrã Anti-Reflexo</li>
+                <li>Dynamic Crystal Color</li>
+                <li>Processador Crystal 4K</li>
+                <li> HDR</li>
               </ul>
             </div>
           </div>
         </div>
         <div class="samsung__accordion__item"
-             style="background-image: url(images/uhd-smart.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-left: 3px solid #fff;  border-right: 3px solid #fff;">
+             style="background-image: url(images/uhd-smart.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; ">
           <div class="accordion__title">
 
             <span class="accordion__title-text">SMART</span>
@@ -839,17 +1418,17 @@
           </div>
           <div class="accordion__content" id="uhd__smart">
             <div class="acc_content_item">
-              <p>Design revolucionário que elimina as distrações</p>
+              <p>Começa a tua experiência inteligente 4K </p>
               <ul>
-                <li>Ecrã e Design Infinito</li>
-                <li>Suporte de Parede Slim Fit</li>
-                <li>Slim One Connect Integrável</li>
+                <li>Samsung TV Plus</li>
+                <li> Comando Eco</li>
+                <li>SmartThings</li>
               </ul>
             </div>
           </div>
         </div>
         <div class="samsung__accordion__item"
-             style="background-image: url(images/uhd-experiencia.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-left: 3px solid #fff;  border-right: 3px solid #fff;">
+             style="background-image: url(images/uhd-experiencia.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;">
           <div class="accordion__title">
 
             <span class="accordion__title-text">EXPERIÊNCIA</span>
@@ -857,17 +1436,19 @@
           </div>
           <div class="accordion__content" id="uhd__experiencia">
             <div class="acc_content_item">
-              <p>Inovações Sonoras Redefinidas</p>
+              <p>Aproveita o máximo da TV no conforto da tua casa </p>
               <ul>
-                <li>Object Tracking Sound Pro</li>
-                <li>Som SpaceFit</li>
-                <li>Q-Symphony</li>
+                <li>PC na TV</li>
+                <li> Chamadas de Video com Google Duo</li>
+                <li> Multi View/Tap View</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- ==========================   CLOSE  This code for Mobile version UHD Section  ==========================   -->
 
     <!-- -----------------   Footer category sectio Open ------------------------------  -->
     <section class="samsung__disply__cat">
@@ -933,8 +1514,13 @@
     </section>
     <!-- -----------------   Footer category sectio Close  ------------------------------  -->
   </section>
+
+
+
   <!-- this section for TV's Lifestyle -->
   <section class="samsung__list__tvlifestyle br-section">
+
+    <!-- ==========================   OPEN  This code for DESKTOP version Tv Lifestyle Section  ==========================   -->
     <div class="samsung__container">
       <div class="samsung__mob_info">
         <a href="https://www.worten.pt/tv-video-e-som/tvs/melhores-tvs-ultima-geracao-e-tecnologia/samsung/produtos?Serie-de-fabricante=LS03A&Serie-de-fabricante=LS05T">
@@ -1005,10 +1591,13 @@
         </ul>
       </div>
     </div>
+    <!-- ==========================   CLOSE  This code for DESKTOP version Tv Lifestyle Section  ==========================   -->
+
+    <!-- ==========================   OPEN  This code for Mobile version Tv Lifestyle Section  ==========================   -->
     <div class="samsung__acc_wrapper">
       <div class="samsung__accordion">
         <div class="samsung__accordion__item"
-             style="background-image: url(images/tv-theframe.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-right: 3px solid #fff;">
+             style="background-image: url(images/tv-theframe.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; ">
           <div class="accordion__title">
 
             <span class="accordion__title-text">THE FRAME</span>
@@ -1016,17 +1605,17 @@
           </div>
           <div class="accordion__content" id="lifestyle__frame">
             <div class="acc_content_item">
-              <p> Detalhes nunca antes vistos e um contraste arrojado</p>
+              <p>Cria a tua própria TV</p>
               <ul>
-                <li>Tecnologia Quantum Matrix Pro</li>
-                <li>Processador Neo Quantum 8K</li>
-                <li>Ecrã Anti-Reflexo</li>
+                <li>Modo Arte e Art Store</li>
+                <li>Moldura Personalizável com design moderno</li>
+                <li> Suporte No Gap e Ligações Minimalistas</li>
               </ul>
             </div>
           </div>
         </div>
         <div class="samsung__accordion__item"
-             style="background-image: url(images/tv-sero.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;  border-left: 3px solid #fff;  border-right: 3px solid #fff;">
+             style="background-image: url(images/tv-sero.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; ">
           <div class="accordion__title">
 
             <span class="accordion__title-text">THE SERO</span>
@@ -1034,17 +1623,19 @@
           </div>
           <div class="accordion__content" id="lifestyle__sero">
             <div class="acc_content_item">
-              <p>Design revolucionário que elimina as distrações</p>
+              <p>Entretenimento móvel, melhor na TV</p>
               <ul>
-                <li>Ecrã e Design Infinito</li>
-                <li>Suporte de Parede Slim Fit</li>
-                <li>Slim One Connect Integrável</li>
+                <li> Ecrã rotativo em 100% Volume de Cor</li>
+                <li> Som Poderoso</li>
+                <li>Tap View</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- ==========================   CLOSE  This code for Mobile version Tv Lifestyle Section  ==========================   -->
 
     <!-- -----------------   Footer category sectio Open ------------------------------  -->
     <section class="samsung__disply__cat">
@@ -1081,6 +1672,8 @@
   </section>
 </div>
 <!-- -------------- List Items display section Close  ----------------  -->
+
+
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
@@ -1227,7 +1820,134 @@
 
 
 </script>
-<script src="main.js"></script>
+<script>
+  $(document).ready(function () {
+
+    /*************For vertical accordion of desktop*************/
+
+    var section_newqled = $('.samsung__list__newled .vertical_accordion li');
+
+    function toggleAccordion_newqled() {
+      if ($(this).hasClass("active")) {
+        $('#neoqled__id').click();
+      }
+      section_newqled.removeClass('active');
+      $(this).addClass('active');
+
+    }
+
+    section_newqled.on('click', toggleAccordion_newqled);
+
+    var section_qled = $('.samsung__list__qled .vertical_accordion li');
+
+    function toggleAccordion_qled() {
+      if ($(this).hasClass("active")) {
+        $('#qled__id').click();
+      }
+      section_qled.removeClass('active');
+      $(this).addClass('active');
+    }
+
+    section_qled.on('click', toggleAccordion_qled);
+
+    var section_uhd = $('.samsung__list__uhd .vertical_accordion li');
+
+    function toggleAccordion_uhd() {
+      if ($(this).hasClass("active")) {
+        $('#uhd__id').click();
+      }
+      section_uhd.removeClass('active');
+      $(this).addClass('active');
+    }
+
+    section_uhd.on('click', toggleAccordion_uhd);
+
+
+    var section_lifestyle = $('.samsung__list__tvlifestyle .vertical_accordion li');
+
+    function toggleAccordion_lifestyle() {
+      if ($(this).hasClass("active")) {
+        $('#lifestyle__id').click();
+      }
+      section_lifestyle.removeClass('active');
+      $(this).addClass('active');
+    }
+
+    section_lifestyle.on('click', toggleAccordion_lifestyle);
+    /*************End For vertical accordion of desktop*************/
+
+
+    /*************On click of small thumbnails of samsung list*************/
+    var brsec = $('.samsung__lists li');
+
+    function toggleAcc() {
+      brsec.removeClass('active');
+      $(this).addClass('active');
+      var topsec_id = $(this).data('topsec');
+      var br_all_section = $('section.br-section');
+      br_all_section.removeClass('active');
+      $("." + topsec_id).addClass('active');
+
+      $("." + topsec_id).find('.samsung__display__list_acc').removeClass('active');
+      $("." + topsec_id).find(".samsung__display__list").show();
+      $("." + topsec_id).find(".samsung__accordion").removeClass("active");
+    }
+
+    brsec.on('click', toggleAcc);
+    /*************End On click of small thumbnails of samsung list*************/
+
+
+
+    /************* On click for Mobile to open accordion list *************/
+    var brdisplay = false;
+    var samsung_display_list = $('.samsung__display__list li');
+
+    function toggleSamsungDisplay() {
+      var $this = $(this);
+      samsung_display_list.removeClass('active');
+      $this.addClass('active');
+      var sec_id = $this.data('sec');
+      var acc_sec_id = $this.data('accid');
+      $("#" + acc_sec_id).parent().parent().parent().find('.samsung__accordion').removeClass('active');
+      $("#" + acc_sec_id).parent().parent().parent().find('.accordion__title').removeClass('active accordion-active');
+      $("#" + acc_sec_id).parent().parent().parent().find('.accordion__content').hide();
+      if (!$("#" + acc_sec_id).siblings('.accordion__title').hasClass("accordion-active")) {
+        $("#" + acc_sec_id).slideToggle();
+        $("#" + acc_sec_id).siblings('.accordion__title').addClass('active accordion-active');
+      }
+
+      $("#" + sec_id).addClass('active');
+      $("#" + sec_id).siblings('li').removeClass('active');
+      $this.parent().parent().find('.samsung__display__list_acc').addClass('active');
+      var samsung_accordion = $(".samsung__accordion");
+      samsung_accordion.removeClass('active');
+      $("#" + acc_sec_id).parent().parent().parent().find('.samsung__accordion').addClass('active');
+      $this.parent().parent().find(".samsung__display__list").hide();
+    }
+    samsung_display_list.on('click', toggleSamsungDisplay);
+    /************* End click for Mobile to open accordion list *************/
+
+    $(function () {
+
+      /************* Accordion of Mobile *************/
+      $(".accordion__title").on("click", function (e) {
+
+        e.preventDefault();
+        var $this = $(this);
+
+        if (!$this.hasClass("accordion-active")) {
+          $(".accordion__content").slideUp(400);
+          $(".accordion__title").removeClass("accordion-active");
+        }
+
+        $this.toggleClass("accordion-active");
+        $this.next().slideToggle();
+      });
+      /************* End Accordion of Mobile *************/
+    });
+
+  });
+</script>
 
 </body>
 </html>
