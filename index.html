@@ -67,7 +67,8 @@
       display: flex;
       column-gap: 15px;
       position: relative;
-      align-items: baseline
+      align-items: baseline;
+      margin: 0;
     }
 
     .samsung__top__cat > ul > li.active {
@@ -105,6 +106,7 @@
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
       text-transform: uppercase;
+      margin: 0;
     }
 
     /*  ============ main body  section Close */
@@ -169,6 +171,7 @@
       background-position: center;
       display: flex;
       justify-content: space-around;
+      margin: 0;
     }
 
 
@@ -381,10 +384,10 @@
 
     .samsung__disply__cat .Samsung__cat__items .samsung__cat__item ul li {
       list-style: none;
-      padding-right: 20px;
+      padding-right: 9px;
       display: inline-block;
-      color: #fff;
-
+      color: #a7a7a7;
+      font-size: 14px;
     }
 
     .samsung__disply__cat .Samsung__cat__items .samsung__cat__item ul {
@@ -397,8 +400,12 @@
       text-align: center;
       color: #fff;
       text-transform: uppercase;
+      font-size: 1.3rem;
     }
+.samsung__note__text > .samsung__container p{
 
+  font-size: 13px;
+}
 
     .samsung__cat__btn {
       text-align: center;
@@ -511,6 +518,9 @@
       .samsung__info {
         display: none;
       }
+        .samsung__display__list .samsung__info h3 {
+            font-weight: 700;
+        }
 
       .samsung__disply__cat .Samsung__cat__items .samsung__cat__item ul {
         font-size: 10px;
@@ -643,6 +653,7 @@
       margin: 0;
       white-space: nowrap;
       padding-right: 14px;
+        width:120px;
     }
 
     .vertical_accordion li .section-content {
@@ -1529,10 +1540,10 @@
 
       </div>
       <ul class="samsung__display__list">
-        <li data-sec="samsung_lifestyle_lifestyle" data-accid="lifestyle__frame">
+        <li data-sec="samsung_lifestyle_frame" data-accid="lifestyle__frame">
           <div class="sumsung__display_heading">
-            <p>Tv's Lifestyle</p>
-            <i class="fas fa-plus"></i>
+<!--            <p>Tv's Lifestyle</p>-->
+<!--            <i class="fas fa-plus"></i>-->
           </div>
           <div class="samsung__info">
             <h3>TV’s Lifestyle </h3>
