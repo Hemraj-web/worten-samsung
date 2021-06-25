@@ -22,9 +22,6 @@
     <list default="true" id="27d97c04-75ff-43e7-a17a-86cb2be4e50f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samsung.zip" beforeDir="false" afterPath="$PROJECT_DIR$/worten-samsung.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +64,7 @@
       <workItem from="1624289678352" duration="144000" />
       <workItem from="1624345188889" duration="14000" />
       <workItem from="1624442724848" duration="389000" />
+      <workItem from="1624613324288" duration="3646000" />
     </task>
     <servers />
   </component>
